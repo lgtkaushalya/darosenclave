@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery – Daro’s Enclave</title>
+    <meta name="description" content="Browse photos and videos of Daro’s Enclave: villa, garden, beach, and lifestyle moments." />
+    <link rel="icon" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <div class="container nav-container">
+        <a class="brand" href="./index.html">
+          <img src="/logo.png" alt="Daro’s Enclave logo" class="brand-logo" />
+          <span class="brand-name">Daro’s Enclave</span>
+        </a>
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul>
+            <li><a href="./index.html#home">Home</a></li>
+            <li><a aria-current="page" href="#">Gallery</a></li>
+            <li><a href="./index.html#activities">Activities</a></li>
+            <li><a href="./blog.html">Stories</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="themeToggle" class="btn btn-text" aria-label="Toggle dark mode">Dark</button>
+      </div>
+    </header>
+
+    <main class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h1 id="gallery-title" class="section-title">Photo & Video Gallery</h1>
+        <p class="mt-0">Explore the villa, tropical garden, nearby beaches, and lifestyle moments. Click a photo to expand and read its description.</p>
+
+        <div class="section-head" data-filter>
+          <div class="btn btn-secondary active" data-cat="all">All</div>
+          <div class="btn btn-secondary" data-cat="Villa">Villa</div>
+          <div class="btn btn-secondary" data-cat="Garden">Garden</div>
+          <div class="btn btn-secondary" data-cat="Beach">Beach</div>
+          <div class="btn btn-secondary" data-cat="Lifestyle">Lifestyle</div>
+        </div>
+
+        <div class="grid grid-3 gallery-grid" data-gallery-grid>
+          <!-- Repeatable figure items with SEO-friendly captions -->
+          <figure class="card" data-item data-category="Villa">
+            <a href="assets/images/gallery/villa-1.jpg" class="lightbox-trigger" data-caption="Villa facade at dusk with warm ambient lighting.">
+              <img src="assets/images/gallery/villa-1.jpg" alt="Villa facade at dusk with warm ambient lighting" />
+            </a>
+            <figcaption>Villa facade at dusk with warm ambient lighting.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Villa">
+            <a href="assets/images/gallery/villa-2.jpg" class="lightbox-trigger" data-caption="Airy bedroom with king-size bed and wooden textures.">
+              <img src="assets/images/gallery/villa-2.jpg" alt="Airy bedroom with king-size bed and wooden textures" />
+            </a>
+            <figcaption>Airy bedroom with king-size bed and wooden textures.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Garden">
+            <a href="assets/images/gallery/garden-1.jpg" class="lightbox-trigger" data-caption="Stone pathway through a lush tropical garden.">
+              <img src="assets/images/gallery/garden-1.jpg" alt="Stone pathway through a lush tropical garden" />
+            </a>
+            <figcaption>Stone pathway through a lush tropical garden.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Garden">
+            <a href="assets/images/gallery/garden-2.jpg" class="lightbox-trigger" data-caption="Shaded garden corner for quiet relaxation.">
+              <img src="assets/images/gallery/garden-2.jpg" alt="Shaded garden corner for quiet relaxation" />
+            </a>
+            <figcaption>Shaded garden corner for quiet relaxation.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Beach">
+            <a href="assets/images/gallery/beach-1.jpg" class="lightbox-trigger" data-caption="Gentle morning light over the Indian Ocean.">
+              <img src="assets/images/gallery/beach-1.jpg" alt="Gentle morning light over the Indian Ocean" />
+            </a>
+            <figcaption>Gentle morning light over the Indian Ocean.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Lifestyle">
+            <a href="assets/images/gallery/lifestyle-1.jpg" class="lightbox-trigger" data-caption="Traditional Sri Lankan cooking with clay pots and spices.">
+              <img src="assets/images/gallery/lifestyle-1.jpg" alt="Traditional Sri Lankan cooking with clay pots and spices" />
+            </a>
+            <figcaption>Traditional Sri Lankan cooking with clay pots and spices.</figcaption>
+          </figure>
+          <!-- Additional placeholders; real images can be added with same structure -->
+          <figure class="card" data-item data-category="Beach">
+            <a href="assets/images/gallery/beach-2.jpg" class="lightbox-trigger" data-caption="Coconut-fringed shoreline near Mirissa.">
+              <img src="assets/images/gallery/beach-2.jpg" alt="Coconut-fringed shoreline near Mirissa" />
+            </a>
+            <figcaption>Coconut-fringed shoreline near Mirissa.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Villa">
+            <a href="assets/images/gallery/villa-3.jpg" class="lightbox-trigger" data-caption="Living room with smart TV and cozy seating.">
+              <img src="assets/images/gallery/villa-3.jpg" alt="Living room with smart TV and cozy seating" />
+            </a>
+            <figcaption>Living room with smart TV and cozy seating.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Lifestyle">
+            <a href="assets/images/gallery/lifestyle-2.jpg" class="lightbox-trigger" data-caption="Family enjoying traditional games in the garden.">
+              <img src="assets/images/gallery/lifestyle-2.jpg" alt="Family enjoying traditional games in the garden" />
+            </a>
+            <figcaption>Family enjoying traditional games in the garden.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Garden">
+            <a href="assets/images/gallery/garden-3.jpg" class="lightbox-trigger" data-caption="Banana saplings planted by guests with name tags.">
+              <img src="assets/images/gallery/garden-3.jpg" alt="Banana saplings planted by guests with name tags" />
+            </a>
+            <figcaption>Banana saplings planted by guests with name tags.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Villa">
+            <a href="assets/images/gallery/villa-4.jpg" class="lightbox-trigger" data-caption="Authentic kitchen with traditional utensils.">
+              <img src="assets/images/gallery/villa-4.jpg" alt="Authentic kitchen with traditional utensils" />
+            </a>
+            <figcaption>Authentic kitchen with traditional utensils.</figcaption>
+          </figure>
+          <figure class="card" data-item data-category="Beach">
+            <a href="assets/images/gallery/beach-3.jpg" class="lightbox-trigger" data-caption="Parrot Rock and nearby reef at low tide.">
+              <img src="assets/images/gallery/beach-3.jpg" alt="Parrot Rock and nearby reef at low tide" />
+            </a>
+            <figcaption>Parrot Rock and nearby reef at low tide.</figcaption>
+          </figure>
+        </div>
+
+        <div class="center mt-24">
+          <button id="loadMore" class="btn btn-secondary">Load more</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Lightbox Modal (shared structure) -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <figure class="lightbox-figure">
+        <img id="lightboxImage" alt="Expanded gallery item" />
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+    </div>
+
+    <!-- Structured Data: LodgingBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Daro’s Enclave",
+        "url": "",
+        "image": ["/logo.png"],
+        "logo": "/logo.png",
+        "telephone": "+94 767 488 404",
+        "email": "darosenclave@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "229/A, Egodawaththa",
+          "addressLocality": "Kamburugamuwa",
+          "addressCountry": "LK"
+        }
+      }
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
+
+
+
