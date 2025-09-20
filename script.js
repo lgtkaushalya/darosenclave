@@ -49,6 +49,98 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   let heroTimer = setInterval(nextHero, 6000);
 
+  // Home gallery progressive load using ordered list, skipping those already visible
+  const homeGallery = document.querySelector('#gallery-preview .gallery-grid');
+  const seeMoreBtn = document.getElementById('seeMoreHome');
+  const COLS = 3;
+  const DEFAULT_ROWS = 3;
+  const PER_CLICK_ROWS = 3;
+  // Ordered list (remaining images) per user request
+  const masterOrder = [
+    "room-1-daros-enclave.jpg",
+    "room-1-mirror-daros-enclave.jpg",
+    "room-2-bed-daros-enclave.jpg",
+    "room-2-daros-enclave.jpg",
+    "room-2-mirror-daros-enclave.jpg",
+    "room-2-mirro-table-daros-enclave.jpg",
+    "front-view-daros-enclave.jpg",
+    "living-room-daros-enclave.jpg",
+    "wall-cupboard-daros-enclave.jpg",
+    "antique-furniture-daros-enclave.jpg",
+    "sleeping-chart-daros-enclave.jpg",
+    "couch-daros-enclave.jpg",
+    "dining-room-daros-enclave.jpg",
+    "pantry-daros-enclave.jpg",
+    "pantry-aminities-daros-enclave.jpg",
+    "pantry-equipments-daros-enclave.jpg",
+    "glasses-pantry-daros-enclave.jpg",
+    "antique-sawing-machine-daros-enclave.jpg",
+    "bathroom-mirror-daros-enclave.jpg",
+    "bathroom-arrangement-daros-enclave.jpg",
+    "bathroom-towels-daros-encalve.jpg",
+    "bathroom-shampo-bottles-daros-enclave.jpg",
+    "bathroom-daros-enclave.jpg",
+    "bathroom-water-closet-daros-enclave.jpg",
+    "traditional-kitchen-daros-enclave.jpg",
+    "traditional-wood-fire-place-daros-enclave.jpg",
+    "srilankan-spices-daros-enclave.jpg",
+    "srilankan-style-pots-daros-enclave.jpg",
+    "traditional-grinding-stone-daros-enclave.jpg",
+    "traditional-coconet-scraper-daros-enclave.jpg",
+    "traditional-cooking-daros-enclave.jpg",
+    "srilankan-tea-daros-enclave.jpg",
+    "garden-daros-enclave.jpg",
+    "birds-daros-enclave.jpg",
+    "garden-view-daros-enclave.jpg",
+  ];
+  // Remove any intentionally excluded filenames
+  const EXCLUDE = new Set(["varenda-daros-enclave.jpg"]);
+  for (let i = masterOrder.length - 1; i >= 0; i--) {
+    if (EXCLUDE.has(masterOrder[i])) masterOrder.splice(i, 1);
+  }
+
+  function trimHomeGalleryToVisibleRows(rows) {
+    if (!homeGallery) return;
+    const keep = rows * COLS;
+    const items = Array.from(homeGallery.querySelectorAll('a.gallery-item'));
+    for (let i = items.length - 1; i >= keep; i--) {
+      items[i].remove();
+    }
+  }
+  function getAlreadyShownFilenames() {
+    if (!homeGallery) return [];
+    return Array.from(homeGallery.querySelectorAll('img'))
+      .map(img => (img.getAttribute('src') || '').split('/').pop())
+      .filter(Boolean);
+  }
+  function nextBatchToAppend(batchSize) {
+    const shown = new Set(getAlreadyShownFilenames());
+    return masterOrder.filter(name => !shown.has(name)).slice(0, batchSize);
+  }
+  function appendImagesToHome(names) {
+    if (!homeGallery) return;
+    names.forEach(name => {
+      const href = `assets/gallery/${name}`;
+      const a = document.createElement('a');
+      a.href = href;
+      a.className = 'gallery-item lightbox-trigger';
+      a.setAttribute('data-caption', name.replace(/[-_]/g,' ').replace(/\.jpg$/i,''));
+      const img = document.createElement('img');
+      img.src = href;
+      img.alt = a.getAttribute('data-caption');
+      a.appendChild(img);
+      homeGallery.appendChild(a);
+    });
+  }
+  // Ensure only 3 rows are visible by default
+  trimHomeGalleryToVisibleRows(DEFAULT_ROWS);
+
+  seeMoreBtn?.addEventListener('click', () => {
+    const batch = nextBatchToAppend(PER_CLICK_ROWS * COLS); // add 3 more rows => 9 images
+    appendImagesToHome(batch);
+    if (nextBatchToAppend(1).length === 0) seeMoreBtn.style.display = 'none';
+  });
+
   // Mobile menu toggle
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
