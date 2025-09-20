@@ -32,23 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hero slideshow (from assets/slide-show)
   const hero = document.querySelector('.hero');
   const heroImages = [
-    'assets/slide-show/10.jpg',
-    'assets/slide-show/11.jpg',
-    'assets/slide-show/16.jpg',
-    'assets/slide-show/24.jpg',
-    'assets/slide-show/43.jpg',
-    'assets/slide-show/46.jpg',
-    'assets/slide-show/IMG_0004.jpg',
-    'assets/slide-show/IMG_0041.jpg',
-    'assets/slide-show/IMG_9930.jpg',
-    'assets/slide-show/IMG_9945.jpg',
-    'assets/slide-show/IMG_9958.jpg',
-    'assets/slide-show/IMG_9966.jpg',
-    'assets/slide-show/IMG_9969.jpg',
-    'assets/slide-show/IMG_9974.jpg',
-    'assets/slide-show/IMG_9988.jpg',
-    'assets/slide-show/IMG_9996.jpg',
-    'assets/slide-show/IMG_9997.jpg'
+    'assets/slide-show/daros-enclave-room.jpg',
+    'assets/slide-show/daros-enclave-dinning-area.jpg',
+    'assets/slide-show/daros-enclave-authentic-kitchen-experience.jpg',
+    'assets/slide-show/daros-enclave-relaxing-outdoor-veranda.jpg',
+    'assets/slide-show/depiyassegala-rock-near-by-daros-enclave.jpg',
+    'assets/slide-show/surfing-at-waligama-near-by-daros-enclave.jpg',
+    'assets/slide-show/kamburugamuwa-beach-near-by-daros-enclave.jpg',
+    'assets/slide-show/sandy-beaches-at-kamburugamuwa.jpg',
+    'assets/slide-show/sandy-beaches-at-kamburugamuwa-2.jpg',
+    'assets/slide-show/garden-fruits-in-daros-enclave.jpg',
   ];
   // Preload images to avoid flicker
   const _preload = heroImages.map(src => { const i = new Image(); i.src = src; return i; });
