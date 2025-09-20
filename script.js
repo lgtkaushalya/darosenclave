@@ -296,13 +296,16 @@ document.addEventListener('DOMContentLoaded', () => {
     lb?.setAttribute('aria-hidden', 'true');
     if (lbImg) lbImg.src = '';
   }
-  document.querySelectorAll('.lightbox-trigger').forEach(a => {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      const src = a.getAttribute('href');
-      const caption = a.getAttribute('data-caption') || '';
-      if (src) openLightbox(src, caption);
-    });
+  // Use event delegation so dynamically-added gallery items also open the lightbox
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('.lightbox-trigger');
+    if (!a) return;
+    // Ensure the clicked anchor is within the document
+    if (!document.contains(a)) return;
+    e.preventDefault();
+    const src = a.getAttribute('href');
+    const caption = a.getAttribute('data-caption') || '';
+    if (src) openLightbox(src, caption);
   });
   lbClose?.addEventListener('click', closeLightbox);
   lb?.addEventListener('click', (e) => {
