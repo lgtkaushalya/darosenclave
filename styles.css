@@ -120,7 +120,8 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 /* Amenities */
 .amenities-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 18px; list-style: none; padding: 0; margin: 0; }
 .amenities-list li { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; background: var(--card); border-radius: 14px; border: 1px solid rgba(0,0,0,0.06); box-shadow: var(--shadow); }
-.amenities-list .icon { font-size: 20px; margin-top: 2px; }
+.amenities-list .icon { width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px; color: var(--brown); }
+.amenities-list .icon svg { width: 28px; height: 28px; stroke-width: 2; }
 
 /* Activities */
 .activities-grid img { aspect-ratio: 16 / 9; object-fit: cover; }

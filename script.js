@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Init lucide icons (Airbnb-like outline style)
+  try { if (window.lucide && window.lucide.createIcons) window.lucide.createIcons(); } catch (_) {}
   // Theme Toggle
   // Dark mode removed: no theme toggle logic
 
