@@ -1,19 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Theme Toggle
-  const themeToggle = document.getElementById('themeToggle');
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
-  updateThemeToggleLabel();
-  themeToggle?.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', current);
-    localStorage.setItem('theme', current);
-    updateThemeToggleLabel();
-  });
-  function updateThemeToggleLabel() {
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    if (themeToggle) themeToggle.textContent = isDark ? 'Light' : 'Dark';
-  }
+  // Dark mode removed: no theme toggle logic
 
   // Smooth scroll for same-page links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -59,6 +46,38 @@ document.addEventListener('DOMContentLoaded', () => {
     setHeroBackground(heroImages[0]);
   }
   let heroTimer = setInterval(nextHero, 6000);
+
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const themeToggleMobile = null;
+  function setMobileMenu(open) {
+    if (!mobileMenu || !menuToggle) return;
+    mobileMenu.hidden = !open;
+    mobileMenu.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  menuToggle?.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') === 'true';
+    setMobileMenu(!open);
+  });
+  // Close when clicking a link
+  mobileMenu?.addEventListener('click', (e) => {
+    const link = e.target.closest('a,button');
+    if (!link) return;
+    if (link.tagName === 'A') setMobileMenu(false);
+  });
+  // Sync dark mode button in mobile
+  // no-op
+  // ESC closes
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setMobileMenu(false);
+  });
+  // On resize to desktop, ensure menu closed
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) setMobileMenu(false);
+  });
 
   // Persona interactions: expand card into host area without touching hero slideshow
   const personaHost = document.getElementById('personaExpandedHost');

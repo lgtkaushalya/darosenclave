@@ -23,7 +23,7 @@
           <img src="assets/Logo.png" alt="Daro’s Enclave logo" class="brand-logo" />
           <span class="brand-name">Daro’s Enclave</span>
         </a>
-        <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation" style="margin-left:auto;">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#gallery-preview">Gallery</a></li>
@@ -32,8 +32,19 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <button id="themeToggle" class="btn btn-text" aria-label="Toggle dark mode">Dark</button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" style="margin-left:8px;">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
       </div>
+      <nav id="mobileMenu" class="mobile-nav" aria-label="Mobile Navigation" hidden>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#gallery-preview">Gallery</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="home">
