@@ -60,15 +60,108 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   let heroTimer = setInterval(nextHero, 6000);
 
-  // Persona interactions override hero image
+  // Persona interactions: expand card into host area without touching hero slideshow
+  const personaHost = document.getElementById('personaExpandedHost');
+  let transitionLock = false;
+  let hasOpenedOnce = false;
+
+  function buildExpandedWrapper(fromBtn, animate) {
+    const content = fromBtn.querySelector('.persona-expanded');
+    if (!content) return null;
+    const clone = content.cloneNode(true);
+    clone.hidden = false;
+    const teaserTitle = fromBtn.querySelector('h3')?.textContent || '';
+    const headingWrap = document.createElement('div');
+    headingWrap.className = 'persona-header';
+    const headingEl = document.createElement('h3');
+    headingEl.textContent = teaserTitle;
+    headingEl.className = 'mt-0';
+    const minimize = document.createElement('button');
+    minimize.className = 'persona-close';
+    minimize.setAttribute('aria-label', 'Minimize');
+    minimize.innerHTML = '×';
+    headingWrap.appendChild(headingEl);
+    headingWrap.appendChild(minimize);
+    const wrapper = document.createElement('div');
+    if (animate) wrapper.className = 'persona-expanded-enter';
+    wrapper.appendChild(headingWrap);
+    wrapper.appendChild(clone);
+    return { wrapper, minimize };
+  }
+
+  function renderExpanded(fromBtn) {
+    if (!personaHost) return;
+    const built = buildExpandedWrapper(fromBtn, !hasOpenedOnce ? true : false);
+    if (!built) return;
+    const { wrapper, minimize } = built;
+    personaHost.innerHTML = '';
+    personaHost.appendChild(wrapper);
+    personaHost.hidden = false;
+    personaHost.classList.add('open');
+    if (!hasOpenedOnce) {
+      requestAnimationFrame(() => {
+        wrapper.classList.add('persona-expanded-enter-active');
+        hasOpenedOnce = true;
+      });
+    }
+    minimize.addEventListener('click', () => collapseExpanded());
+  }
+
+  function collapseExpanded() {
+    if (!personaHost) return;
+    const wrapper = personaHost.querySelector('.persona-expanded-enter, .persona-expanded-enter-active');
+    if (wrapper) {
+      if (transitionLock) return; // prevent flicker when switching quickly
+      transitionLock = true;
+      wrapper.classList.remove('persona-expanded-enter-active');
+      wrapper.classList.add('persona-expanded-exit-active');
+      setTimeout(() => {
+        personaHost.hidden = true;
+        personaHost.classList.remove('open');
+        personaHost.innerHTML = '';
+        // reset expanded state on cards
+        document.querySelectorAll('.persona[aria-expanded="true"]').forEach(p => p.setAttribute('aria-expanded','false'));
+        transitionLock = false;
+      }, 300);
+    } else {
+      personaHost.hidden = true;
+      personaHost.classList.remove('open');
+      personaHost.innerHTML = '';
+      document.querySelectorAll('.persona[aria-expanded="true"]').forEach(p => p.setAttribute('aria-expanded','false'));
+    }
+  }
+
   document.querySelectorAll('.persona').forEach(btn => {
     btn.addEventListener('click', () => {
-      const img = btn.getAttribute('data-hero');
-      if (img) {
-        clearInterval(heroTimer);
-        setHeroBackground(img);
-        // resume after a while
-        heroTimer = setInterval(nextHero, 8000);
+      if (transitionLock) return; // avoid flicker by ignoring clicks during transition
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      // if another card is open, close it first then open the new one after transition
+      const anyOpen = document.querySelector('.persona[aria-expanded="true"]');
+      if (anyOpen && anyOpen !== btn) {
+        // Replace content immediately, no closing animation
+        document.querySelectorAll('.persona').forEach(p => p.setAttribute('aria-expanded','false'));
+        anyOpen.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-expanded','true');
+        // swap content in host without animating
+        if (personaHost) {
+          const built = buildExpandedWrapper(btn, false);
+          if (built) {
+            const { wrapper, minimize } = built;
+            personaHost.innerHTML = '';
+            personaHost.appendChild(wrapper);
+            personaHost.hidden = false;
+            personaHost.classList.add('open');
+            minimize.addEventListener('click', () => collapseExpanded());
+          }
+        }
+      } else {
+        document.querySelectorAll('.persona').forEach(p => p.setAttribute('aria-expanded','false'));
+        if (isOpen) {
+          collapseExpanded();
+          return;
+        }
+        btn.setAttribute('aria-expanded','true');
+        renderExpanded(btn);
       }
     });
   });
