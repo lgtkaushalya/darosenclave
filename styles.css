@@ -116,6 +116,8 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 
 /* Gallery */
 .gallery-grid .gallery-item img { aspect-ratio: 4 / 3; object-fit: cover; }
+/* Hide visible captions beneath gallery images */
+.gallery-grid figcaption { display: none !important; }
 
 /* Amenities */
 .amenities-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 18px; list-style: none; padding: 0; margin: 0; }
@@ -148,10 +150,26 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 /* Lightbox */
 .lightbox { position: fixed; inset: 0; display: none; place-items: center; background: rgba(0,0,0,0.7); z-index: 100; padding: 20px; }
 .lightbox.open { display: grid; }
-.lightbox-figure { max-width: min(1000px, 92vw); }
-.lightbox-figure img { width: 100%; height: auto; border-radius: 12px; }
-.lightbox-figure figcaption { color: #fff; margin-top: 8px; text-align: center; }
+.lightbox-figure { max-width: 88vw; max-height: 85vh; }
+.lightbox-figure img { max-width: 88vw; max-height: 85vh; width: auto; height: auto; object-fit: contain; border-radius: 12px; }
+.lightbox-figure figcaption { display: none !important; }
 .lightbox-close { position: absolute; top: 16px; right: 16px; background: #fff; color: #000; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 20px; cursor: pointer; box-shadow: var(--shadow); }
+/* Lightbox navigation */
+.lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: 1px solid rgba(0,0,0,0.1); width: 40px; height: 40px; border-radius: 50%; display: none; align-items: center; justify-content: center; font-size: 22px; color: #000; box-shadow: var(--shadow); cursor: pointer; }
+.lightbox.open .lightbox-prev, .lightbox.open .lightbox-next { display: inline-flex; }
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+.lightbox.hide-prev .lightbox-prev { display: none; }
+.lightbox.hide-next .lightbox-next { display: none; }
+@media (max-width: 640px) {
+  .lightbox { padding: 10px; overflow: hidden; }
+  /* Keep image narrower than screen so nav buttons don't overlap content */
+  .lightbox-figure { max-width: 82vw; max-height: 88vh; }
+  .lightbox-figure img { max-width: 70vw; max-height: 88vh; }
+  .lightbox-prev, .lightbox-next { width: 48px; height: 48px; font-size: 26px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}
 
 /* Utilities */
 .mt-0 { margin-top: 0; }

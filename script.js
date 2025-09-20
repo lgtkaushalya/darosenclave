@@ -94,10 +94,28 @@ document.addEventListener('DOMContentLoaded', () => {
     "garden-view-daros-enclave.jpg",
   ];
   // Remove any intentionally excluded filenames
-  const EXCLUDE = new Set(["varenda-daros-enclave.jpg"]);
+  const EXCLUDE = new Set([
+    "varenda-daros-enclave.jpg",
+    "birds-daros-enclave.jpg",
+    "garden-daros-enclave.jpg",
+    "garden-view-daros-enclave.jpg",
+  ]);
   for (let i = masterOrder.length - 1; i >= 0; i--) {
     if (EXCLUDE.has(masterOrder[i])) masterOrder.splice(i, 1);
   }
+
+  // Ensure these specific images are appended at the end of the load order
+  const INCLUDE_AT_END = [
+    "coral in kamburugamuwa beach near daro's enclave.jpg",
+    "kamburugamuwa-beach-daros-enclave.jpg",
+    "sandy-beaches-at-kamburugamuwa-2.jpg",
+  ];
+  // Remove if present, then append to end preserving order
+  for (const name of INCLUDE_AT_END) {
+    const idx = masterOrder.indexOf(name);
+    if (idx !== -1) masterOrder.splice(idx, 1);
+  }
+  masterOrder.push(...INCLUDE_AT_END);
 
   function trimHomeGalleryToVisibleRows(rows) {
     if (!homeGallery) return;
@@ -119,15 +137,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function appendImagesToHome(names) {
     if (!homeGallery) return;
+    function makeCaption(name) {
+      let s = name
+        .replace(/\.jpg$/i, '')
+        .replace(/[-_]/g, ' ')
+        .replace(/\d+/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLowerCase();
+      // Simple grammar/typo fixes
+      s = s
+        .replace(/near by/g, 'nearby')
+        .replace(/equipments/g, 'equipment')
+        .replace(/aminities/g, 'amenities')
+        .replace(/coconet/g, 'coconut')
+        .replace(/mirro/g, 'mirror')
+        .replace(/shampo\b/g, 'shampoo')
+        .replace(/wood fire place/g, 'wood fireplace');
+      // Proper nouns capitalization
+      s = s
+        .replace(/sri lankan/g, 'Sri Lankan')
+        .replace(/daros enclave|daro s enclave/g, 'Daro’s Enclave')
+        .replace(/kamburugamuwa/g, 'Kamburugamuwa')
+        .replace(/weligama/g, 'Weligama')
+        .replace(/depiyassegala/g, 'Depiyassegala');
+      // Sentence case for the remainder
+      if (s && s[0] === s[0].toLowerCase()) s = s[0].toUpperCase() + s.slice(1);
+      return s;
+    }
     names.forEach(name => {
       const href = `assets/gallery/${name}`;
       const a = document.createElement('a');
       a.href = href;
       a.className = 'gallery-item lightbox-trigger';
-      a.setAttribute('data-caption', name.replace(/[-_]/g,' ').replace(/\.jpg$/i,''));
+      a.setAttribute('data-caption', '');
       const img = document.createElement('img');
       img.src = href;
-      img.alt = a.getAttribute('data-caption');
+      img.alt = '';
       a.appendChild(img);
       homeGallery.appendChild(a);
     });
@@ -284,12 +330,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbImg = document.getElementById('lightboxImage');
   const lbCaption = document.getElementById('lightboxCaption');
   const lbClose = document.querySelector('.lightbox-close');
+  const lbPrev = document.querySelector('.lightbox-prev');
+  const lbNext = document.querySelector('.lightbox-next');
+  let lightboxIndex = -1;
+  function getAllGalleryAnchors() {
+    return Array.from(document.querySelectorAll('#gallery-preview .gallery-grid a.gallery-item'));
+  }
   function openLightbox(src, caption) {
     if (!lb || !lbImg) return;
     lbImg.src = src;
     if (lbCaption) lbCaption.textContent = caption || '';
     lb?.classList.add('open');
     lb?.setAttribute('aria-hidden', 'false');
+    // update nav button visibility
+    const anchors = getAllGalleryAnchors();
+    const idx = anchors.findIndex(a => a.getAttribute('href') === src);
+    lightboxIndex = idx;
+    updateNavButtons();
+  }
+  function updateNavButtons() {
+    const anchors = getAllGalleryAnchors();
+    const hasPrev = lightboxIndex > 0;
+    // Show next if there is a next loaded image OR more images remain to be loaded
+    const moreToLoad = (typeof nextBatchToAppend === 'function') && nextBatchToAppend(1).length > 0;
+    const hasNext = (lightboxIndex >= 0 && lightboxIndex < anchors.length - 1) || moreToLoad;
+    lb?.classList.toggle('hide-prev', !hasPrev);
+    lb?.classList.toggle('hide-next', !hasNext);
+  }
+  function go(delta) {
+    let anchors = getAllGalleryAnchors();
+    if (lightboxIndex < 0) return;
+    let nextIndex = lightboxIndex + delta;
+    // If moving forward past the end, auto-load more images if available
+    if (delta > 0 && nextIndex >= anchors.length) {
+      const batch = nextBatchToAppend(PER_CLICK_ROWS * COLS) || [];
+      if (batch.length > 0) {
+        appendImagesToHome(batch);
+        // hide button if we've exhausted all
+        if (nextBatchToAppend(1).length === 0 && seeMoreBtn) seeMoreBtn.style.display = 'none';
+        anchors = getAllGalleryAnchors();
+      }
+    }
+    // Recompute bounds after potential load
+    nextIndex = lightboxIndex + delta;
+    if (nextIndex < 0 || nextIndex >= anchors.length) return;
+    lightboxIndex = nextIndex;
+    const a = anchors[lightboxIndex];
+    const src = a.getAttribute('href');
+    const caption = a.getAttribute('data-caption') || '';
+    if (src) openLightbox(src, caption);
   }
   function closeLightbox() {
     lb?.classList.remove('open');
@@ -308,9 +397,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (src) openLightbox(src, caption);
   });
   lbClose?.addEventListener('click', closeLightbox);
+  // Disable closing the modal by clicking the backdrop; only close via the X button
   lb?.addEventListener('click', (e) => {
-    if (e.target === lb) closeLightbox();
+    // If user clicked directly on the overlay, do nothing (prevent close)
+    if (e.target === lb) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
   });
+  lbPrev?.addEventListener('click', (e) => { e.stopPropagation(); go(-1); });
+  lbNext?.addEventListener('click', (e) => { e.stopPropagation(); go(1); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb?.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') go(-1);
+    if (e.key === 'ArrowRight') go(1);
+  });
+  // Basic swipe support for mobile
+  let touchStartX = 0;
+  lbImg?.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+  lbImg?.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) {
+      if (dx > 0) go(-1); else go(1);
+    }
+  }, { passive: true });
 
   // Gallery page progressive reveal and category filter (if present)
   const galleryGrid = document.querySelector('[data-gallery-grid]');
