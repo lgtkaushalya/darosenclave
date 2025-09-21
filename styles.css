@@ -80,7 +80,7 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .mobile-nav a, .mobile-nav button { display: block; width: 100%; text-align: left; padding: 10px 8px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.06); background: var(--card); }
 
 /* Hero */
-.hero { position: relative; min-height: 86vh; display: grid; place-items: center; background-size: cover; background-position: center; transition: background-image 0.8s ease-in-out; }
+.hero { position: relative; min-height: 86vh; display: grid; place-items: center; background-size: cover; background-position: center; background-repeat: no-repeat; transition: background-image 0.8s ease-in-out; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.35)); }
 .hero-content { position: relative; text-align: center; color: #fff; padding: 40px 0; animation: fadeUp 800ms ease both; }
 .hero-logo { width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 12px; box-shadow: var(--shadow); }
@@ -150,6 +150,30 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .list-inline { display: flex; flex-wrap: wrap; gap: 8px 12px; padding: 0; margin: 12px 0 0; list-style: none; }
 .list-inline li { background: var(--bg-2); padding: 6px 10px; border-radius: 999px; font-size: 14px; }
+/* Chip styling for Why You'll Love It */
+.why-love-chips { margin-top: 20px; }
+.why-love-chips .list-inline li { background: var(--brown); color: #fff; padding: 8px 14px; font-weight: 500; }
+/* Button styling within paragraphs */
+p .btn { display: inline-block; margin-left: 8px; }
+/* Explore Nearby link styling */
+.explore-link { 
+  text-decoration: none; 
+  border-bottom: 1px dotted var(--brown); 
+  color: var(--brown); 
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.explore-link:hover { 
+  border-bottom-style: solid; 
+  color: var(--text);
+}
+.explore-link .link-icon { 
+  width: 14px; 
+  height: 14px; 
+  flex-shrink: 0;
+}
 
 /* Blog */
 .blog-card img { aspect-ratio: 16 / 9; object-fit: cover; }

@@ -18,36 +18,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Hero slideshow (from assets/slide-show)
+  // Hero slideshow (from assets/slide-show) - only on homepage
   const hero = document.querySelector('.hero');
-  const heroImages = [
-    'assets/slide-show/daros-enclave-room.jpg',
-    'assets/slide-show/daros-enclave-dinning-area.jpg',
-    'assets/slide-show/daros-enclave-authentic-kitchen-experience.jpg',
-    'assets/slide-show/daros-enclave-relaxing-outdoor-veranda.jpg',
-    'assets/slide-show/depiyassegala-rock-near-by-daros-enclave.jpg',
-    'assets/slide-show/surfing-at-waligama-near-by-daros-enclave.jpg',
-    'assets/slide-show/kamburugamuwa-beach-near-by-daros-enclave.jpg',
-    'assets/slide-show/sandy-beaches-at-kamburugamuwa.jpg',
-    'assets/slide-show/sandy-beaches-at-kamburugamuwa-2.jpg',
-    'assets/slide-show/garden-fruits-in-daros-enclave.jpg',
-  ];
-  // Preload images to avoid flicker
-  const _preload = heroImages.map(src => { const i = new Image(); i.src = src; return i; });
+  const isHomepage = window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/index.html') || window.location.pathname.includes('index.html');
+  
+  if (isHomepage && hero) {
+    const heroImages = [
+      'assets/slide-show/daros-enclave-room.jpg',
+      'assets/slide-show/daros-enclave-dinning-area.jpg',
+      'assets/slide-show/daros-enclave-authentic-kitchen-experience.jpg',
+      'assets/slide-show/daros-enclave-relaxing-outdoor-veranda.jpg',
+      'assets/slide-show/depiyassegala-rock-near-by-daros-enclave.jpg',
+      'assets/slide-show/surfing-at-waligama-near-by-daros-enclave.jpg',
+      'assets/slide-show/kamburugamuwa-beach-near-by-daros-enclave.jpg',
+      'assets/slide-show/sandy-beaches-at-kamburugamuwa.jpg',
+      'assets/slide-show/sandy-beaches-at-kamburugamuwa-2.jpg',
+      'assets/slide-show/garden-fruits-in-daros-enclave.jpg',
+    ];
+    // Preload images to avoid flicker
+    const _preload = heroImages.map(src => { const i = new Image(); i.src = src; return i; });
 
-  let heroIndex = 0;
-  function setHeroBackground(src) {
-    if (!hero) return;
-    hero.style.backgroundImage = `url(${src})`;
+    let heroIndex = 0;
+    function setHeroBackground(src) {
+      if (!hero) return;
+      hero.style.backgroundImage = `url(${src})`;
+    }
+    function nextHero() {
+      heroIndex = (heroIndex + 1) % heroImages.length;
+      setHeroBackground(heroImages[heroIndex]);
+    }
+    if (heroImages.length > 0) {
+      setHeroBackground(heroImages[0]);
+    }
+    let heroTimer = setInterval(nextHero, 6000);
   }
-  function nextHero() {
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    setHeroBackground(heroImages[heroIndex]);
-  }
-  if (heroImages.length > 0) {
-  setHeroBackground(heroImages[0]);
-  }
-  let heroTimer = setInterval(nextHero, 6000);
 
   // Home gallery progressive load using ordered list, skipping those already visible
   const homeGallery = document.querySelector('#gallery-preview .gallery-grid');
