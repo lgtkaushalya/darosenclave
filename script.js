@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setHeroBackground(heroImages[heroIndex]);
   }
   if (heroImages.length > 0) {
-    setHeroBackground(heroImages[0]);
+  setHeroBackground(heroImages[0]);
   }
   let heroTimer = setInterval(nextHero, 6000);
 
@@ -218,6 +218,18 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     if (window.innerWidth > 960) setMobileMenu(false);
   });
+
+  // Equalize heights for activity cards on desktop only
+  function equalizeActivityHeights() {
+    const cards = Array.from(document.querySelectorAll('.activities-grid .activity-card'));
+    cards.forEach(c => c.style.height = '');
+    if (window.innerWidth <= 960) return; // stacked on mobile/tablet
+    let max = 0;
+    cards.forEach(c => { max = Math.max(max, c.offsetHeight); });
+    cards.forEach(c => c.style.height = max + 'px');
+  }
+  equalizeActivityHeights();
+  window.addEventListener('resize', equalizeActivityHeights);
 
   // Persona interactions: expand card into host area without touching hero slideshow
   const personaHost = document.getElementById('personaExpandedHost');
@@ -402,10 +414,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!a) return;
     // Ensure the clicked anchor is within the document
     if (!document.contains(a)) return;
-    e.preventDefault();
-    const src = a.getAttribute('href');
-    const caption = a.getAttribute('data-caption') || '';
-    if (src) openLightbox(src, caption);
+      e.preventDefault();
+      const src = a.getAttribute('href');
+      const caption = a.getAttribute('data-caption') || '';
+      if (src) openLightbox(src, caption);
   });
   lbClose?.addEventListener('click', closeLightbox);
   // Disable closing the modal by clicking the backdrop; only close via the X button

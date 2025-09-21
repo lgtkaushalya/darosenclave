@@ -35,9 +35,10 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .section { padding: 64px 0; }
 .section-alt { background: var(--bg-2); }
 .section-title { margin-bottom: 24px; }
-.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
 .center { text-align: center; }
 .mt-24 { margin-top: 24px; }
+.section-intro { max-width: 760px; margin: 0 auto 16px; color: var(--muted); }
 
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px; border: 1px solid transparent; background: var(--brown); color: #fff; box-shadow: var(--shadow); cursor: pointer; transition: transform .15s ease, opacity .15s ease; }
@@ -99,9 +100,9 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .card-body { padding: 12px 4px 0; }
 .persona { text-align: left; cursor: pointer; }
 .persona h3 { margin-top: 4px; }
-.persona .expand-hint { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(0,0,0,0.6); margin-top: 6px; }
-.persona .expand-hint .expand-icon { width: 16px; height: 16px; color: var(--brown); }
-.persona:hover .expand-hint { color: var(--brown); }
+.expand-hint { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(0,0,0,0.6); margin-top: 6px; }
+.expand-hint .expand-icon { width: 16px; height: 16px; color: var(--brown); }
+.persona:hover .expand-hint, .activity-card .expand-hint:hover { color: var(--brown); }
 .persona-expanded { margin-top: 12px; }
 .persona-expanded .video-wrap { margin-bottom: 12px; }
 .persona-host { margin-bottom: 18px; display: none; position: relative; }
@@ -131,6 +132,16 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 
 /* Activities */
 .activities-grid img { aspect-ratio: 16 / 9; object-fit: cover; }
+.activity-card { transition: transform .18s ease, box-shadow .18s ease; overflow: hidden; padding: 14px; display: flex; }
+.activity-card .card-body { display: flex; flex-direction: column; }
+.activities-grid { align-items: stretch; }
+.activity-card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,0,0,0.12); }
+.activity-card h3 { font-size: 22px; margin: 4px 0 8px; }
+.activity-card .view-more { display: inline-flex; align-items: center; gap: 6px; margin-left: 6px; color: var(--brown); font-weight: 600; }
+.activity-card .view-more [data-lucide] { width: 18px; height: 18px; }
+.activity-card .sub-activities { display: grid; gap: 12px; margin-top: 12px; }
+.activity-card .sub-activities h4 { margin: 2px 0 4px; font-size: 16px; font-weight: 700; color: var(--text); }
+.activity-card .sub-activities p { margin: 0 0 6px; color: var(--muted); }
 .video-wrap { position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 12px; overflow: hidden; }
 .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
 .list-inline { display: flex; flex-wrap: wrap; gap: 8px 12px; padding: 0; margin: 12px 0 0; list-style: none; }
