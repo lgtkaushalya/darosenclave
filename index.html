@@ -29,7 +29,6 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#gallery-preview">Gallery</a></li>
             <li><a href="#activities">Activities</a></li>
-            <li><a href="#stories">Stories</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -40,10 +39,9 @@
       <nav id="mobileMenu" class="mobile-nav" aria-label="Mobile Navigation" hidden>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#gallery-preview">Gallery</a></li>
-          <li><a href="#activities">Activities</a></li>
-          <li><a href="#stories">Stories</a></li>
-          <li><a href="#contact">Contact</a></li>
+            <li><a href="#gallery-preview">Gallery</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -292,7 +290,7 @@
       </section>
 
       <!-- Stories / Blog Preview -->
-      <section class="section section-alt" id="stories" aria-labelledby="stories-title">
+      <section class="section section-alt" id="stories" aria-labelledby="stories-title" style="display: none;">
         <div class="container">
           <div class="section-head">
             <h2 id="stories-title" class="section-title">Stories from the South</h2>
@@ -327,19 +325,80 @@
       <!-- Contact -->
       <section class="section" id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <h2 id="contact-title" class="section-title">Contact Us</h2>
-          <div class="contact-card card">
-            <div class="contact-details">
-              <p><strong>Phone:</strong> <a href="tel:+94767488404">+94 767 488 404</a></p>
-              <p><strong>Email:</strong> <a href="mailto:darosenclave@gmail.com">darosenclave@gmail.com</a></p>
-              <p><strong>Address:</strong> 229/A, Egodawaththa, Kamburugamuwa</p>
+          <h2 id="contact-title" class="section-title">Get in Touch with Us</h2>
+          <div class="book-now-hero">
+            <a href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener" class="btn btn-primary">
+              <span data-lucide="calendar" aria-hidden="true"></span>
+              Book Now
+            </a>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h3>Contact Details</h3>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-icon" data-lucide="phone" aria-hidden="true"></span>
+                  <div>
+                    <strong>Phone:</strong> <a href="tel:+94767488404">+94 76 748 8404</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon" data-lucide="mail" aria-hidden="true"></span>
+                  <div>
+                    <strong>Email:</strong> <a href="mailto:darosenclave@gmail.com">darosenclave@gmail.com</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon" data-lucide="map-pin" aria-hidden="true"></span>
+                  <div>
+                    <strong>Address:</strong> Daro's Enclave, 229/A, Egodawaththa, Kamburugamuwa, Sri Lanka
+                  </div>
+                </div>
+              </div>
+              
+              <div class="social-links">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com/darosenclave" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span data-lucide="facebook" aria-hidden="true"></span>
+                    <span>Facebook</span>
+                  </a>
+                  <a href="https://www.tiktok.com/@daros.enclave" target="_blank" rel="noopener" aria-label="TikTok">
+                    <span data-lucide="music" aria-hidden="true"></span>
+                    <span>TikTok</span>
+                  </a>
+                  <a href="https://www.instagram.com/daros.enclave" target="_blank" rel="noopener" aria-label="Instagram">
+                    <span data-lucide="instagram" aria-hidden="true"></span>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="https://wa.me/94767488404" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <span data-lucide="message-circle" aria-hidden="true"></span>
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="contact-actions">
-              <a class="btn btn-whatsapp" href="https://wa.me/94767488404" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-                <span class="wa-icon" aria-hidden="true"></span>
-                WhatsApp
-              </a>
-              <a class="btn btn-primary" href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">Book on Airbnb</a>
+            
+            <div class="contact-map">
+              <h3>Find Us</h3>
+              <div class="map-container">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497.10811799584553!2d80.4966529920451!3d5.9442964593540415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae13f0018ca304f%3A0xe7ee933ea19998d1!2sDaro&#39;s%20Enclave!5e0!3m2!1sen!2slk!4v1758471423297!5m2!1sen!2slk"
+                  width="100%" 
+                  height="400" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Daro's Enclave Location">
+                </iframe>
+                <div class="map-overlay">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=5.944836506267094,80.49693119526077" target="_blank" rel="noopener" class="btn btn-outline">
+                    <span data-lucide="navigation" aria-hidden="true"></span>
+                    Get Directions
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -358,7 +417,6 @@
             <li><a href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">Booking</a></li>
             <li><a href="./gallery.html">Gallery</a></li>
             <li><a href="#activities">Activities</a></li>
-            <li><a href="./blog.html">Stories</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
