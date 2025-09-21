@@ -12,87 +12,139 @@
   <body>
     <header class="site-header" aria-label="Primary">
       <div class="container nav-container">
-        <a class="brand" href="../index.html#activities">
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="brand-logo" />
-          <span class="brand-name">Daro’s Enclave</span>
+        <a class="brand" href="/">
+          <img src="../assets/Logo.png" alt="Daro's Enclave logo" class="brand-logo" />
+          <span class="brand-name">Daro's Enclave</span>
         </a>
-        <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation" style="margin-left:auto;">
           <ul>
             <li><a href="../index.html#home">Home</a></li>
-            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
+            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
           </ul>
         </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" style="margin-left:8px;">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
       </div>
+      <nav id="mobileMenu" class="mobile-nav" aria-label="Mobile Navigation" hidden>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#gallery-preview">Gallery</a></li>
+          <li><a href="../index.html#activities">Activities</a></li>
+          <li><a href="../index.html#stories">Stories</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="top">
-      <section class="hero" style="background-image:url('../assets/images/activities/whales.jpg')">
+      <section class="hero" style="background-image:url('../assets/gallery/whale-watching-at-mirissa.png')">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
           <h1 class="hero-title">Whale Watching in Mirissa</h1>
-          <p class="hero-subtitle">Sail out to spot majestic blue whales and playful dolphins.</p>
+          <p class="hero-subtitle">Set Sail for an Unforgettable Marine Adventure</p>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="overview">
+      <section class="section" aria-labelledby="why-love">
         <div class="container">
           <div class="section-head">
-            <h2 id="overview" class="section-title">Overview</h2>
+            <h2 id="why-love" class="section-title">Why You'll Love It</h2>
             <a class="btn btn-secondary" href="../index.html#activities">← Back to Activities</a>
           </div>
           <p>
-            Mirissa is Sri Lanka’s premier whale‑watching hub, famed for regular sightings of blue whales—the
-            largest creatures to ever live—as well as spinner dolphins and, on lucky mornings, sperm whales and
-            orcas. Boats typically depart just after sunrise, when conditions are calm and the ocean glows in
-            pearly tones. From Daro’s Enclave, a short drive places you at the harbor in time to board with a
-            licensed operator committed to responsible marine viewing.
+            Mirissa is one of the <strong>best places in the world to spot blue whales</strong>, the largest animals on earth. Just a short drive from Daro's Enclave, you can embark on an exciting boat trip into the Indian Ocean and witness whales, dolphins, and sea turtles in their natural habitat.
           </p>
           <p>
-            The excursion itself is slow and scenic: a glide over glittering water, passing coastal cliffs and
-            fishing catamarans before reaching deeper channels. Naturalists on board help scan the horizon for
-            blows—those tall, steamy plumes that signal a whale surfacing. Keep your camera ready; blue whales
-            may arc their impossibly long backs and raise their flukes before slipping beneath the surface, a
-            memory that stays with travelers for life. Ethical crews maintain safe distances and avoid crowding,
-            preserving a tranquil experience for both wildlife and guests.
+            This once-in-a-lifetime experience combines the thrill of the open sea with the serenity of watching majestic marine life. Whether it's your first whale-watching trip or a return visit, Mirissa offers something truly special.
           </p>
+          <div class="why-love-chips">
+            <ul class="list-inline">
+              <li>World-famous spot for blue and sperm whales</li>
+              <li>Frequent sightings of spinner dolphins and turtles</li>
+              <li>Guided tours with experienced local boat crews</li>
+              <li>Unforgettable sunrise views over the Indian Ocean</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="section section-alt" aria-labelledby="highlights">
+      <section class="section section-alt" aria-labelledby="plan-visit">
         <div class="container">
-          <h2 id="highlights" class="section-title">Highlights</h2>
-          <ul class="list-inline">
-            <li>World‑class blue whale encounters in season</li>
-            <li>Knowledgeable naturalists and responsible operators</li>
-            <li>Golden sunrise departures with calm seas</li>
-            <li>Easy access from Daro’s Enclave</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="best-time">
-        <div class="container">
-          <h2 id="best-time" class="section-title">Best Time to Visit</h2>
-          <p>
-            Peak whale season runs roughly from November to April, when migrating blues pass the southern
-            coast. Trips operate year‑round when weather allows, but the highest chances of sightings align with
-            these months. Departures are early—pack a light jacket, sunscreen, and motion‑comfort remedies if
-            you’re sensitive to swell.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-alt" aria-labelledby="local-tips">
-        <div class="container">
-          <h2 id="local-tips" class="section-title">Local Tips</h2>
+          <h2 id="plan-visit" class="section-title">Plan Your Visit</h2>
+          <h3>Location & Distance</h3>
+          <p>Mirissa Harbour is just <strong>10 minutes from Daro's Enclave</strong> by car. Early departures mean a peaceful drive through coastal villages and fishing towns before the boats set sail.</p>
+          
+          <h3>Best Time to Visit</h3>
           <ul>
-            <li>Choose an operator that follows international whale‑watching guidelines.</li>
-            <li>Bring binoculars for spotting distant blows and seabirds.</li>
-            <li>Wear reef‑safe sunscreen and a hat—the sun is strong at sea.</li>
-            <li>Enjoy a warm tea on board at dawn; most boats provide light refreshments.</li>
+            <li><strong>Whale watching season:</strong> November to April (calm seas, higher sightings)</li>
+            <li><strong>Departure time:</strong> Boats usually leave around 6:00 AM. Arrive early for boarding</li>
           </ul>
+          
+          <h3>What to Expect</h3>
+          <ul>
+            <li>Boat rides last <strong>3–5 hours</strong>, depending on sightings</li>
+            <li>Life jackets and safety instructions provided by tour operators</li>
+            <li>Complimentary tea, coffee, or snacks on many tours</li>
+            <li>Whale sightings are common, but nature is always unpredictable</li>
+          </ul>
+          
+          <h3>Who It's For</h3>
+          <ul>
+            <li><strong>Families:</strong> A memorable adventure for kids (age 5+ recommended)</li>
+            <li><strong>Nature Lovers:</strong> Ideal for those passionate about wildlife</li>
+            <li><strong>Photographers:</strong> Perfect for dramatic sunrise and marine life shots</li>
+            <li><strong>Adventurers:</strong> A thrilling way to explore Sri Lanka's open seas</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="insider-tips">
+        <div class="container">
+          <h2 id="insider-tips" class="section-title">Insider Tips</h2>
+          <ul>
+            <li>Carry motion-sickness tablets if you're prone to seasickness</li>
+            <li>Bring a hat, sunglasses, and eco-friendly sunscreen</li>
+            <li>A camera with zoom is essential for capturing whale moments</li>
+            <li>Choose a reputable operator with eco-conscious practices</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="explore-nearby">
+        <div class="container">
+          <h2 id="explore-nearby" class="section-title">Explore Nearby</h2>
+          <ul>
+            <li><a class="explore-link" href="sea-bath-nearby-beaches.html">Sea Bath at Nearby Beaches<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Refresh with a swim after your boat trip</li>
+            <li><a class="explore-link" href="surfing-weligama.html">Surfing at Weligama<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Just 15 minutes away, a great follow-up adventure</li>
+            <li><a class="explore-link" href="local-photo-spots.html">Local Photo Spots<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Capture Mirissa's iconic palm tree hill</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="book-stay">
+        <div class="container">
+          <h2 id="book-stay" class="section-title">Book Your Stay</h2>
+          <p>Stay at <strong>Daro's Enclave</strong> and enjoy easy access to Mirissa's whale-watching tours. Wake up early, set sail, and return to the comfort of your villa — <a class="explore-link" href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">book your stay today<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>!</p>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="faqs">
+        <div class="container">
+          <h2 id="faqs" class="section-title">FAQs</h2>
+          <div>
+            <h3>Q: What kinds of whales can I see in Mirissa?</h3>
+            <p>A: Blue whales are the most common, but sperm whales, Bryde's whales, and dolphins are also often spotted.</p>
+            
+            <h3>Q: Is whale watching safe for children?</h3>
+            <p>A: Yes, though children over 5 are recommended. Life jackets are provided for all passengers.</p>
+            
+            <h3>Q: How long does a whale-watching trip last?</h3>
+            <p>A: Trips usually last between 3 to 5 hours, depending on sea conditions and sightings.</p>
+          </div>
         </div>
       </section>
     </main>
@@ -100,8 +152,8 @@
     <footer class="site-footer" aria-label="Footer">
       <div class="container footer-grid">
         <div>
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="footer-logo" />
-          <p class="muted">An authentic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
+          <img src="/logo.png" alt="Daro's Enclave logo" class="footer-logo" />
+          <p class="muted">A rustic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
         </div>
         <nav aria-label="Quick Links">
           <h4>Quick Links</h4>
@@ -109,7 +161,17 @@
             <li><a href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">Booking</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
             <li><a href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Follow</h4>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+            <li><a href="#" aria-label="TikTok">TikTok</a></li>
+            <li><a href="https://wa.me/94767488404" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></li>
           </ul>
         </nav>
         <div>
@@ -118,12 +180,12 @@
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>© 2025 Daro’s Enclave. All rights reserved.</p>
+        <p>© 2025 Daro's Enclave. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>try{window.lucide&&window.lucide.createIcons&&window.lucide.createIcons()}catch(e){}</script>
+    <script src="../script.js"></script>
   </body>
   </html>
 
