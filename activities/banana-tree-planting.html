@@ -12,80 +12,139 @@
   <body>
     <header class="site-header" aria-label="Primary">
       <div class="container nav-container">
-        <a class="brand" href="../index.html#activities">
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="brand-logo" />
-          <span class="brand-name">Daro’s Enclave</span>
+        <a class="brand" href="/">
+          <img src="../assets/Logo.png" alt="Daro's Enclave logo" class="brand-logo" />
+          <span class="brand-name">Daro's Enclave</span>
         </a>
-        <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation" style="margin-left:auto;">
           <ul>
             <li><a href="../index.html#home">Home</a></li>
-            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
+            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
           </ul>
         </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" style="margin-left:8px;">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
       </div>
+      <nav id="mobileMenu" class="mobile-nav" aria-label="Mobile Navigation" hidden>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#gallery-preview">Gallery</a></li>
+          <li><a href="../index.html#activities">Activities</a></li>
+          <li><a href="../index.html#stories">Stories</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="top">
-      <section class="hero" style="background-image:url('../assets/images/activities/banana.jpg')">
+      <section class="hero" style="background-image:url('../assets/gallery/banana-planting.png')">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
-          <h1 class="hero-title">Banana Tree Planting</h1>
-          <p class="hero-subtitle">Leave your mark in our tropical garden.</p>
+          <h1 class="hero-title">Banana Tree Planting at Daro's Enclave</h1>
+          <p class="hero-subtitle">Plant a Tree, Leave a Legacy</p>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="overview">
+      <section class="section" aria-labelledby="why-love">
         <div class="container">
           <div class="section-head">
-            <h2 id="overview" class="section-title">Overview</h2>
+            <h2 id="why-love" class="section-title">Why You'll Love It</h2>
             <a class="btn btn-secondary" href="../index.html#activities">← Back to Activities</a>
           </div>
           <p>
-            Planting a banana tree at Daro’s Enclave is a small but special way to connect with the land and
-            leave a living memory behind. Guided by our team, you’ll choose a young plant, learn how to prepare
-            the soil, and set your banana in place. We’ll label it with your name and date so you can look for
-            it on future visits—and we’ll share updates if you’d like to follow its growth.
+            At <strong>Daro's Enclave</strong>, we believe in creating memories that last beyond your stay. Our <strong>Banana Tree Planting experience</strong> gives you the chance to leave a lasting, living footprint in Sri Lanka.
           </p>
           <p>
-            Banana trees thrive in our warm, coastal climate and often fruit within a year. It’s a hands‑on
-            experience that delights kids and adults alike, and it contributes to the diversity and shade of our
-            garden spaces.
+            It's more than just planting a tree — it's a connection with the land, the community, and the environment. Guests of all ages love getting their hands in the soil, learning about local traditions, and knowing that the tree they plant will continue to thrive for years to come.
           </p>
+          <div class="why-love-chips">
+            <ul class="list-inline">
+              <li>A hands-on eco-friendly activity for guests</li>
+              <li>Learn about the importance of banana trees in Sri Lankan culture</li>
+              <li>A symbolic gesture of giving back to nature</li>
+              <li>Fun and meaningful for families, couples, and solo travelers</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="section section-alt" aria-labelledby="highlights">
+      <section class="section section-alt" aria-labelledby="plan-visit">
         <div class="container">
-          <h2 id="highlights" class="section-title">Highlights</h2>
-          <ul class="list-inline">
-            <li>Hands‑on planting with guidance</li>
-            <li>Name tagged for future visits and photos</li>
-            <li>Great for families and couples</li>
-            <li>Adds shade and biodiversity to the garden</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="best-time">
-        <div class="container">
-          <h2 id="best-time" class="section-title">Best Time to Visit</h2>
-          <p>
-            Planting is possible year‑round. Light morning sessions avoid heat and give your sapling a gentle
-            start. We can time it after breakfast or in the cooler late afternoon.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-alt" aria-labelledby="local-tips">
-        <div class="container">
-          <h2 id="local-tips" class="section-title">Local Tips</h2>
+          <h2 id="plan-visit" class="section-title">Plan Your Visit</h2>
+          <h3>Location & Distance</h3>
+          <p>The activity takes place <strong>right at Daro's Enclave</strong>, in our garden space dedicated to guest-planted banana trees.</p>
+          
+          <h3>Best Time to Visit</h3>
           <ul>
-            <li>Wear shoes suitable for digging in soft soil.</li>
-            <li>Snap a photo with your new tree and we’ll share updates as it grows.</li>
-            <li>Ask about seasonal varieties for fruit timing.</li>
+            <li><strong>Anytime during your stay</strong></li>
+            <li>Morning or late afternoon is recommended for cooler weather</li>
           </ul>
+          
+          <h3>What to Expect</h3>
+          <ul>
+            <li>Guided session on how to plant and care for your banana tree</li>
+            <li>Insight into how bananas are used in Sri Lankan cuisine and daily life</li>
+            <li>A photo opportunity with your tree — a memory to cherish and revisit on future stays</li>
+            <li>Duration: 30–45 minutes</li>
+          </ul>
+          
+          <h3>Who It's For</h3>
+          <ul>
+            <li><strong>Families:</strong> Kids love this hands-on, nature-based activity</li>
+            <li><strong>Eco-Conscious Travelers:</strong> Contribute positively to the environment</li>
+            <li><strong>Couples:</strong> A symbolic way to create something lasting together</li>
+            <li><strong>Cultural Travelers:</strong> Learn about the role of banana trees in local life</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="insider-tips">
+        <div class="container">
+          <h2 id="insider-tips" class="section-title">Insider Tips</h2>
+          <ul>
+            <li>Wear comfortable clothes and shoes you don't mind getting a little muddy</li>
+            <li>Ask your host to explain how bananas feature in Sri Lankan dishes and rituals</li>
+            <li>Take a photo with your planted tree to remember your contribution</li>
+            <li>Water your tree during your stay to help it settle</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="explore-nearby">
+        <div class="container">
+          <h2 id="explore-nearby" class="section-title">Explore Nearby</h2>
+          <ul>
+            <li><a class="explore-link" href="guided-sri-lankan-cooking.html">Guided Cooking Experience at Daro's Enclave<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Use banana leaves and fruits in authentic Sri Lankan dishes</li>
+            <li><a class="explore-link" href="traditional-childrens-play.html">Traditional Children's Play Items<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Continue your cultural exploration with family-friendly activities</li>
+            <li><a class="explore-link" href="lagoon-safari-garanduwa.html">Lagoon Safari<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Combine your eco-experience with a nature adventure</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="book-stay">
+        <div class="container">
+          <h2 id="book-stay" class="section-title">Book Your Stay</h2>
+          <p>Stay at <strong>Daro's Enclave</strong> and make your holiday truly memorable. From surfing and safaris to cooking and tree planting, every activity brings you closer to Sri Lanka's culture and nature. <strong>Book your villa today and leave your mark — naturally</strong> — <a class="explore-link" href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">book your stay today<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>!</p>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="faqs">
+        <div class="container">
+          <h2 id="faqs" class="section-title">FAQs</h2>
+          <div>
+            <h3>Q: Do I need gardening experience?</h3>
+            <p>A: Not at all! Our team will guide you step by step.</p>
+            
+            <h3>Q: How long does it take to plant a tree?</h3>
+            <p>A: About 30–45 minutes, making it a perfect short activity to fit into your day.</p>
+            
+            <h3>Q: Can children join this activity?</h3>
+            <p>A: Absolutely — kids love it, and it's safe, fun, and educational.</p>
+          </div>
         </div>
       </section>
     </main>
@@ -93,8 +152,8 @@
     <footer class="site-footer" aria-label="Footer">
       <div class="container footer-grid">
         <div>
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="footer-logo" />
-          <p class="muted">An authentic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
+          <img src="/logo.png" alt="Daro's Enclave logo" class="footer-logo" />
+          <p class="muted">A rustic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
         </div>
         <nav aria-label="Quick Links">
           <h4>Quick Links</h4>
@@ -102,7 +161,17 @@
             <li><a href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">Booking</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
             <li><a href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Follow</h4>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+            <li><a href="#" aria-label="TikTok">TikTok</a></li>
+            <li><a href="https://wa.me/94767488404" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></li>
           </ul>
         </nav>
         <div>
@@ -111,12 +180,12 @@
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>© 2025 Daro’s Enclave. All rights reserved.</p>
+        <p>© 2025 Daro's Enclave. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>try{window.lucide&&window.lucide.createIcons&&window.lucide.createIcons()}catch(e){}</script>
+    <script src="../script.js"></script>
   </body>
   </html>
 
