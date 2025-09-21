@@ -99,7 +99,11 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .card-body { padding: 12px 4px 0; }
 .persona { text-align: left; cursor: pointer; }
 .persona h3 { margin-top: 4px; }
+.persona .expand-hint { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(0,0,0,0.6); margin-top: 6px; }
+.persona .expand-hint .expand-icon { width: 16px; height: 16px; color: var(--brown); }
+.persona:hover .expand-hint { color: var(--brown); }
 .persona-expanded { margin-top: 12px; }
+.persona-expanded .video-wrap { margin-bottom: 12px; }
 .persona-host { margin-bottom: 18px; display: none; position: relative; }
 .persona-host.open { display: block; animation: fadeIn .25s ease; }
 .persona[aria-expanded="true"] { box-shadow: 0 0 0 2px color-mix(in srgb, var(--brown), transparent 75%), var(--shadow); }
