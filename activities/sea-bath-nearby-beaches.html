@@ -12,84 +12,137 @@
   <body>
     <header class="site-header" aria-label="Primary">
       <div class="container nav-container">
-        <a class="brand" href="../index.html#activities">
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="brand-logo" />
-          <span class="brand-name">Daro’s Enclave</span>
+        <a class="brand" href="/">
+          <img src="../assets/Logo.png" alt="Daro's Enclave logo" class="brand-logo" />
+          <span class="brand-name">Daro's Enclave</span>
         </a>
-        <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation" style="margin-left:auto;">
           <ul>
             <li><a href="../index.html#home">Home</a></li>
-            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
+            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
           </ul>
         </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" style="margin-left:8px;">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
       </div>
+      <nav id="mobileMenu" class="mobile-nav" aria-label="Mobile Navigation" hidden>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#gallery-preview">Gallery</a></li>
+          <li><a href="../index.html#activities">Activities</a></li>
+          <li><a href="../index.html#stories">Stories</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="top">
-      <section class="hero" style="background-image:url('../assets/images/activities/beach.jpg')">
+      <section class="hero" style="background-image:url('../assets/gallery/sandy-beaches-at-kamburugamuwa-2.jpg')">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
           <h1 class="hero-title">Sea Bath at Nearby Beaches</h1>
-          <p class="hero-subtitle">Swim at Kamburugamuwa, Madiha, and Mirissa for crystal‑clear waters.</p>
+          <p class="hero-subtitle">Relax and Rejuvenate in Sri Lanka's Crystal-Clear Waters</p>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="overview">
+      <section class="section" aria-labelledby="why-love">
         <div class="container">
           <div class="section-head">
-            <h2 id="overview" class="section-title">Overview</h2>
+            <h2 id="why-love" class="section-title">Why You'll Love It</h2>
             <a class="btn btn-secondary" href="../index.html#activities">← Back to Activities</a>
           </div>
           <p>
-            Within minutes of Daro’s Enclave you’ll find a string of sun‑kissed beaches, each with its own
-            character. Kamburugamuwa’s small bays are sheltered and family‑friendly; Madiha offers reefy,
-            aquamarine pools perfect for a calm dip; and Mirissa’s palm‑lined crescent is ideal for long,
-            meandering swims before a beachside juice. The water stays warm year‑round and mornings are often
-            glassy, making an early plunge the most refreshing start to the day.
+            There's nothing quite like a refreshing sea bath along Sri Lanka's south coast. Just minutes from Daro's Enclave, you'll find calm, family-friendly beaches where the waves are gentle, the waters are warm, and the golden sands invite you to relax.
           </p>
           <p>
-            Beach cafés serve fresh coconut, fruit plates, and grilled seafood—linger after your swim to soak
-            up the slow rhythm of the south coast. With lifeguards at popular stretches and gentle entries in
-            several coves, you can choose a spot that matches your comfort. We’ll happily suggest the best
-            bay for conditions on the day.
+            Unlike the busier tourist spots, these nearby beaches give you a more <strong>authentic and peaceful coastal experience</strong>. Perfect for families with children, couples seeking quiet moments, or anyone looking to unwind after a day of adventure.
           </p>
+          <div class="why-love-chips">
+            <ul class="list-inline">
+              <li>Safe, shallow waters ideal for swimming</li>
+              <li>Less crowded than popular tourist beaches</li>
+              <li>Beautiful palm-lined stretches of sand</li>
+              <li>Perfect for sunset dips and quiet relaxation</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="section section-alt" aria-labelledby="highlights">
+      <section class="section section-alt" aria-labelledby="plan-visit">
         <div class="container">
-          <h2 id="highlights" class="section-title">Highlights</h2>
-          <ul class="list-inline">
-            <li>Warm, clear water and postcard‑worthy coves</li>
-            <li>Family‑friendly options with gentle entries</li>
-            <li>Nearby cafés and shade for easy beach days</li>
-            <li>Short drive from Daro’s Enclave</li>
+          <h2 id="plan-visit" class="section-title">Plan Your Visit</h2>
+          <h3>Location & Distance</h3>
+          <p>Several safe beaches for sea bathing are within <strong>5–10 minutes from Daro's Enclave</strong>. Options range from lively stretches with small cafes to tucked-away spots known mostly to locals.</p>
+          
+          <h3>Best Time to Visit</h3>
+          <ul>
+            <li><strong>Season:</strong> November to April for calmer seas</li>
+            <li><strong>Time of day:</strong> Early morning for solitude, evening for stunning sunsets</li>
+          </ul>
+          
+          <h3>What to Expect</h3>
+          <ul>
+            <li>Gentle waves, perfect for swimming and floating</li>
+            <li>Some beaches offer small snack stalls and loungers</li>
+            <li>Expect a relaxed, laid-back atmosphere — perfect for unwinding</li>
+          </ul>
+          
+          <h3>Who It's For</h3>
+          <ul>
+            <li><strong>Families:</strong> Safe areas for kids to splash around</li>
+            <li><strong>Couples:</strong> Romantic sunset swims</li>
+            <li><strong>Solo Travelers:</strong> Quiet spaces for a mindful retreat</li>
+            <li><strong>Wellness Seekers:</strong> Natural saltwater bath with relaxing benefits</li>
           </ul>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="best-time">
+      <section class="section" aria-labelledby="insider-tips">
         <div class="container">
-          <h2 id="best-time" class="section-title">Best Time to Visit</h2>
-          <p>
-            The sea is swimmable year‑round. From November to April skies are often clear and the water is
-            calmest. Early mornings provide the most tranquil conditions; afternoons bring golden light perfect
-            for photos and a second dip.
-          </p>
+          <h2 id="insider-tips" class="section-title">Insider Tips</h2>
+          <ul>
+            <li>Carry a towel and change of clothes if planning to stay after dark</li>
+            <li>Avoid swimming during rough seas (usually May–October)</li>
+            <li>Pack a light picnic for a simple beachside meal</li>
+          </ul>
         </div>
       </section>
-
-      <section class="section section-alt" aria-labelledby="local-tips">
+      
+      <section class="section section-alt" aria-labelledby="explore-nearby">
         <div class="container">
-          <h2 id="local-tips" class="section-title">Local Tips</h2>
-        <ul>
-          <li>Wear reef‑safe sunscreen; tropical sun is strong.</li>
-          <li>Ask us for the day’s best beach depending on wind and tide.</li>
-          <li>Carry water shoes if you plan to explore rock pools.</li>
-          <li>Keep an eye on flags and lifeguard advice at popular beaches.</li>
-        </ul>
+          <h2 id="explore-nearby" class="section-title">Explore Nearby</h2>
+          <ul>
+            <li><a class="explore-link" href="lagoon-safari-garanduwa.html">Lagoon Safari at Garanduwa<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: A short drive for a nature-filled boat ride</li>
+            <li><a class="explore-link" href="local-photo-spots.html">Local Photo Spots<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Capture golden-hour beach shots</li>
+            <li><a class="explore-link" href="classic-sri-lankan-board-games.html">Traditional Board Games<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Relax at Daro's Enclave after your swim</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="book-stay">
+        <div class="container">
+          <h2 id="book-stay" class="section-title">Book Your Stay</h2>
+          <p>Enjoy the comfort of <strong>Daro's Enclave</strong> while staying close to Sri Lanka's calmest swimming beaches. Step out for a refreshing sea bath, return to your villa, and relax in style — <a class="explore-link" href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">book your stay today<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>!</p>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="faqs">
+        <div class="container">
+          <h2 id="faqs" class="section-title">FAQs</h2>
+          <div>
+            <h3>Q: Are these beaches safe for children?</h3>
+            <p>A: Yes, the nearby beaches have gentle waves and shallow areas that are safe for supervised kids.</p>
+            
+            <h3>Q: Can I swim year-round?</h3>
+            <p>A: The best swimming conditions are from November to April. During monsoon season, waves may be rougher.</p>
+            
+            <h3>Q: Are there lifeguards at these beaches?</h3>
+            <p>A: Some beaches have lifeguards, but not all. It's best to choose calm stretches of water and remain cautious.</p>
+          </div>
         </div>
       </section>
     </main>
@@ -97,8 +150,8 @@
     <footer class="site-footer" aria-label="Footer">
       <div class="container footer-grid">
         <div>
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="footer-logo" />
-          <p class="muted">An authentic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
+          <img src="/logo.png" alt="Daro's Enclave logo" class="footer-logo" />
+          <p class="muted">A rustic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
         </div>
         <nav aria-label="Quick Links">
           <h4>Quick Links</h4>
@@ -106,7 +159,17 @@
             <li><a href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">Booking</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
             <li><a href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Follow</h4>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+            <li><a href="#" aria-label="TikTok">TikTok</a></li>
+            <li><a href="https://wa.me/94767488404" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></li>
           </ul>
         </nav>
         <div>
@@ -115,12 +178,12 @@
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>© 2025 Daro’s Enclave. All rights reserved.</p>
+        <p>© 2025 Daro's Enclave. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>try{window.lucide&&window.lucide.createIcons&&window.lucide.createIcons()}catch(e){}</script>
+    <script src="../script.js"></script>
   </body>
   </html>
 
