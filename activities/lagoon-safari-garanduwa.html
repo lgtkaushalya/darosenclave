@@ -12,83 +12,139 @@
   <body>
     <header class="site-header" aria-label="Primary">
       <div class="container nav-container">
-        <a class="brand" href="../index.html#activities">
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="brand-logo" />
-          <span class="brand-name">Daro’s Enclave</span>
+        <a class="brand" href="/">
+          <img src="../assets/Logo.png" alt="Daro's Enclave logo" class="brand-logo" />
+          <span class="brand-name">Daro's Enclave</span>
         </a>
-        <nav class="main-nav" aria-label="Main Navigation">
+        <nav class="main-nav" aria-label="Main Navigation" style="margin-left:auto;">
           <ul>
             <li><a href="../index.html#home">Home</a></li>
-            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
+            <li><a aria-current="page" href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
           </ul>
         </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" style="margin-left:8px;">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
       </div>
+      <nav id="mobileMenu" class="mobile-nav" aria-label="Mobile Navigation" hidden>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#gallery-preview">Gallery</a></li>
+          <li><a href="../index.html#activities">Activities</a></li>
+          <li><a href="../index.html#stories">Stories</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="top">
-      <section class="hero" style="background-image:url('../assets/images/activities/lagoon.jpg')">
+      <section class="hero" style="background-image:url('../assets/gallery/garanduwa-mangroves.png')">
         <div class="hero-overlay"></div>
         <div class="hero-content container">
           <h1 class="hero-title">Lagoon Safari at Garanduwa</h1>
-          <p class="hero-subtitle">Quiet waterways, mangrove tunnels, and abundant birdlife.</p>
+          <p class="hero-subtitle">Drift into Nature's Hidden Paradise</p>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="overview">
+      <section class="section" aria-labelledby="why-love">
         <div class="container">
           <div class="section-head">
-            <h2 id="overview" class="section-title">Overview</h2>
+            <h2 id="why-love" class="section-title">Why You'll Love It</h2>
             <a class="btn btn-secondary" href="../index.html#activities">← Back to Activities</a>
           </div>
           <p>
-            Garanduwa’s lagoon is a world of still water and whispering mangroves. Boatmen guide you along
-            narrow channels where roots lace into living tunnels and kingfishers hunt from low branches. The
-            atmosphere is hushed and reflective—an ideal counterpoint to ocean days. Look for cormorants drying
-            their wings, herons stalking the shallows, and flashes of electric blue as bee‑eaters zip past.
+            Just minutes from Daro's Enclave lies the tranquil <strong>Garanduwa Lagoon</strong>, a peaceful escape where mangroves, birdlife, and calm waters create a truly magical setting. A lagoon safari here is more than just a boat ride — it's an intimate journey into Sri Lanka's rich biodiversity and traditional way of life.
           </p>
           <p>
-            Cruises can be timed for sunrise or late afternoon when the light runs gold and birds are most
-            active. Some routes stop at small islands where cinnamon peels in fragrant curls and coconut palms
-            lean over quiet shores. It’s an easy half‑day escape from Daro’s Enclave that reveals the south
-            coast’s gentler rhythm.
+            This experience is perfect if you want to slow down, breathe fresh air, and reconnect with nature. Whether you're spotting rare birds, gliding past mangrove tunnels, or watching fishermen at work, the lagoon safari promises a unique adventure.
           </p>
+          <div class="why-love-chips">
+            <ul class="list-inline">
+              <li>Calm and scenic boat rides through mangroves</li>
+              <li>Birdwatching opportunities — kingfishers, herons, and eagles</li>
+              <li>Learn about traditional lagoon fishing methods</li>
+              <li>Ideal for photography and peaceful escapes</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="section section-alt" aria-labelledby="highlights">
+      <section class="section section-alt" aria-labelledby="plan-visit">
         <div class="container">
-          <h2 id="highlights" class="section-title">Highlights</h2>
-          <ul class="list-inline">
-            <li>Mangrove tunnels and mirror‑calm water</li>
-            <li>Frequent sightings of kingfishers, herons, and bee‑eaters</li>
-            <li>Golden‑hour photography and tranquil ambiance</li>
-            <li>Easy access from Daro’s Enclave</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="best-time">
-        <div class="container">
-          <h2 id="best-time" class="section-title">Best Time to Visit</h2>
-          <p>
-            Sunrises and late afternoons are best for birdlife and soft light. November to April sees calmer
-            weather, but the lagoon is navigable most of the year. Carry a light cover and insect protection
-            around dusk.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-alt" aria-labelledby="local-tips">
-        <div class="container">
-          <h2 id="local-tips" class="section-title">Local Tips</h2>
+          <h2 id="plan-visit" class="section-title">Plan Your Visit</h2>
+          <h3>Location & Distance</h3>
+          <p>Garanduwa Lagoon is just <strong>10 minutes from Daro's Enclave</strong> by car. The short trip takes you through quiet village roads leading straight to the lagoon's edge.</p>
+          
+          <h3>Best Time to Visit</h3>
           <ul>
-            <li>Hire licensed boatmen who respect wildlife distances.</li>
-            <li>Binoculars improve bird‑watching dramatically.</li>
-            <li>Carry cash for small stops (cinnamon demos or coconut).</li>
-            <li>Pack a light shawl and reef‑safe insect balm near sunset.</li>
+            <li><strong>Season:</strong> Year-round, though mornings and evenings are cooler</li>
+            <li><strong>Time of day:</strong> Early morning for bird activity, evening for golden-hour reflections</li>
           </ul>
+          
+          <h3>What to Expect</h3>
+          <ul>
+            <li>A guided boat tour (motor or paddle)</li>
+            <li>Duration: 1–2 hours depending on the route</li>
+            <li>Calm waters — no rough seas or waves</li>
+            <li>Opportunities to see local fishermen and their traditional nets</li>
+          </ul>
+          
+          <h3>Who It's For</h3>
+          <ul>
+            <li><strong>Families:</strong> Safe and calm boat rides for all ages</li>
+            <li><strong>Nature Lovers:</strong> Perfect for birdwatching and mangrove exploration</li>
+            <li><strong>Couples:</strong> Romantic and peaceful atmosphere</li>
+            <li><strong>Photographers:</strong> Stunning reflections and wildlife moments</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="insider-tips">
+        <div class="container">
+          <h2 id="insider-tips" class="section-title">Insider Tips</h2>
+          <ul>
+            <li>Carry binoculars for birdwatching</li>
+            <li>Wear light, comfortable clothes and bring insect repellent</li>
+            <li>Keep your camera ready for surprise wildlife sightings</li>
+            <li>Book a morning ride for cooler weather and better wildlife encounters</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="explore-nearby">
+        <div class="container">
+          <h2 id="explore-nearby" class="section-title">Explore Nearby</h2>
+          <ul>
+            <li><a class="explore-link" href="sea-bath-nearby-beaches.html">Sea Bath at Nearby Beaches<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Refresh after your safari with a swim</li>
+            <li><a class="explore-link" href="guided-sri-lankan-cooking.html">Guided Sri Lankan Cooking<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Return to Daro's Enclave for a cultural food experience</li>
+            <li><a class="explore-link" href="local-photo-spots.html">Local Photo Spots<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>: Capture sunset views of the lagoon's calm waters</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section" aria-labelledby="book-stay">
+        <div class="container">
+          <h2 id="book-stay" class="section-title">Book Your Stay</h2>
+          <p>Stay at <strong>Daro's Enclave</strong> and experience the quiet charm of Garanduwa Lagoon just around the corner. Combine relaxation at the villa with nature-filled adventures — <a class="explore-link" href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">book your stay today<span class="link-icon" data-lucide="external-link" aria-hidden="true"></span></a>!</p>
+        </div>
+      </section>
+      
+      <section class="section section-alt" aria-labelledby="faqs">
+        <div class="container">
+          <h2 id="faqs" class="section-title">FAQs</h2>
+          <div>
+            <h3>Q: How long is a lagoon safari?</h3>
+            <p>A: Most safaris last 1–2 hours, depending on the route and your guide.</p>
+            
+            <h3>Q: Is it safe for children?</h3>
+            <p>A: Yes, the lagoon waters are calm, and boats are stable, making it family-friendly.</p>
+            
+            <h3>Q: What kind of wildlife can I expect to see?</h3>
+            <p>A: You may see kingfishers, herons, eagles, monitor lizards, and occasionally monkeys along the mangroves.</p>
+          </div>
         </div>
       </section>
     </main>
@@ -96,8 +152,8 @@
     <footer class="site-footer" aria-label="Footer">
       <div class="container footer-grid">
         <div>
-          <img src="../assets/Logo.png" alt="Daro’s Enclave logo" class="footer-logo" />
-          <p class="muted">An authentic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
+          <img src="/logo.png" alt="Daro's Enclave logo" class="footer-logo" />
+          <p class="muted">A rustic Sri Lankan heritage villa where ocean, culture, and comfort meet.</p>
         </div>
         <nav aria-label="Quick Links">
           <h4>Quick Links</h4>
@@ -105,7 +161,17 @@
             <li><a href="https://www.airbnb.com/h/darosenclave" target="_blank" rel="noopener">Booking</a></li>
             <li><a href="../index.html#gallery-preview">Gallery</a></li>
             <li><a href="../index.html#activities">Activities</a></li>
+            <li><a href="../index.html#stories">Stories</a></li>
             <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h4>Follow</h4>
+          <ul class="footer-links">
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="Facebook">Facebook</a></li>
+            <li><a href="#" aria-label="TikTok">TikTok</a></li>
+            <li><a href="https://wa.me/94767488404" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a></li>
           </ul>
         </nav>
         <div>
@@ -114,12 +180,12 @@
         </div>
       </div>
       <div class="container footer-bottom">
-        <p>© 2025 Daro’s Enclave. All rights reserved.</p>
+        <p>© 2025 Daro's Enclave. All rights reserved.</p>
       </div>
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>try{window.lucide&&window.lucide.createIcons&&window.lucide.createIcons()}catch(e){}</script>
+    <script src="../script.js"></script>
   </body>
   </html>
 
