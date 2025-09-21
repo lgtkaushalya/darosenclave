@@ -99,7 +99,9 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .card { background: var(--card); border: 1px solid rgba(0,0,0,0.06); border-radius: 16px; box-shadow: var(--shadow); padding: 16px; text-align: left; }
 .card-body { padding: 12px 4px 0; }
 .persona { text-align: left; cursor: pointer; }
-.persona h3 { margin-top: 4px; }
+.persona h3 { margin-top: 0; }
+.persona .persona-teaser { padding-top: 0; }
+.persona .persona-teaser p { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size: 15px; line-height: 1.6; color: var(--muted); }
 .expand-hint { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: rgba(0,0,0,0.6); margin-top: 6px; }
 .expand-hint .expand-icon { width: 16px; height: 16px; color: var(--brown); }
 .persona:hover .expand-hint, .activity-card .expand-hint:hover { color: var(--brown); }
