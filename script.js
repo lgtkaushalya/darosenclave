@@ -257,6 +257,10 @@ document.addEventListener('DOMContentLoaded', () => {
     personaHost.appendChild(wrapper);
     personaHost.hidden = false;
     personaHost.classList.add('open');
+    // Scroll into view and focus for accessibility
+    personaHost.setAttribute('tabindex', '-1');
+    personaHost.focus({ preventScroll: true });
+    personaHost.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (!hasOpenedOnce) {
       requestAnimationFrame(() => {
         wrapper.classList.add('persona-expanded-enter-active');
@@ -310,6 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
             personaHost.appendChild(wrapper);
             personaHost.hidden = false;
             personaHost.classList.add('open');
+            personaHost.setAttribute('tabindex', '-1');
+            personaHost.focus({ preventScroll: true });
+            personaHost.scrollIntoView({ behavior: 'smooth', block: 'start' });
             minimize.addEventListener('click', () => collapseExpanded());
           }
         }
@@ -320,6 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
         btn.setAttribute('aria-expanded','true');
+        // On mobile, scroll to the card itself after expansion
+        if (window.innerWidth <= 640) {
+          btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
         renderExpanded(btn);
       }
     });
