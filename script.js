@@ -24,16 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (isHomepage && hero) {
     const heroImages = [
-      'assets/slide-show/daros-enclave-room.jpg',
-      'assets/slide-show/daros-enclave-dinning-area.jpg',
-      'assets/slide-show/daros-enclave-authentic-kitchen-experience.jpg',
-      'assets/slide-show/daros-enclave-relaxing-outdoor-veranda.jpg',
-      'assets/slide-show/depiyassegala-rock-near-by-daros-enclave.jpg',
-      'assets/slide-show/surfing-at-waligama-near-by-daros-enclave.jpg',
-      'assets/slide-show/kamburugamuwa-beach-near-by-daros-enclave.jpg',
-      'assets/slide-show/sandy-beaches-at-kamburugamuwa.jpg',
-      'assets/slide-show/sandy-beaches-at-kamburugamuwa-2.jpg',
-      'assets/slide-show/garden-fruits-in-daros-enclave.jpg',
+      'assets/slide-show/daros-enclave-room.webp',
+      'assets/slide-show/daros-enclave-dinning-area.webp',
+      'assets/slide-show/daros-enclave-authentic-kitchen-experience.webp',
+      'assets/slide-show/daros-enclave-relaxing-outdoor-veranda.webp',
+      'assets/slide-show/depiyassegala-rock-near-by-daros-enclave.webp',
+      'assets/slide-show/surfing-at-waligama-near-by-daros-enclave.webp',
+      'assets/slide-show/kamburugamuwa-beach-near-by-daros-enclave.webp',
+      'assets/slide-show/sandy-beaches-at-kamburugamuwa.webp',
+      'assets/slide-show/sandy-beaches-at-kamburugamuwa-2.webp',
+      'assets/slide-show/garden-fruits-in-daros-enclave.webp',
     ];
     // Preload images to avoid flicker
     const _preload = heroImages.map(src => { const i = new Image(); i.src = src; return i; });
@@ -61,48 +61,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const PER_CLICK_ROWS = 3;
   // Ordered list (remaining images) per user request
   const masterOrder = [
-    "room-1-daros-enclave.jpg",
-    "room-1-mirror-daros-enclave.jpg",
-    "room-2-bed-daros-enclave.jpg",
-    "room-2-daros-enclave.jpg",
-    "room-2-mirror-daros-enclave.jpg",
-    "room-2-mirro-table-daros-enclave.jpg",
-    "front-view-daros-enclave.jpg",
-    "living-room-daros-enclave.jpg",
-    "wall-cupboard-daros-enclave.jpg",
-    "antique-furniture-daros-enclave.jpg",
-    "sleeping-chart-daros-enclave.jpg",
-    "couch-daros-enclave.jpg",
-    "dining-room-daros-enclave.jpg",
-    "pantry-daros-enclave.jpg",
-    "pantry-aminities-daros-enclave.jpg",
-    "pantry-equipments-daros-enclave.jpg",
-    "glasses-pantry-daros-enclave.jpg",
-    "antique-sawing-machine-daros-enclave.jpg",
-    "bathroom-mirror-daros-enclave.jpg",
-    "bathroom-arrangement-daros-enclave.jpg",
-    "bathroom-towels-daros-encalve.jpg",
-    "bathroom-shampo-bottles-daros-enclave.jpg",
-    "bathroom-daros-enclave.jpg",
-    "bathroom-water-closet-daros-enclave.jpg",
-    "traditional-kitchen-daros-enclave.jpg",
-    "traditional-wood-fire-place-daros-enclave.jpg",
-    "srilankan-spices-daros-enclave.jpg",
-    "srilankan-style-pots-daros-enclave.jpg",
-    "traditional-grinding-stone-daros-enclave.jpg",
-    "traditional-coconet-scraper-daros-enclave.jpg",
-    "traditional-cooking-daros-enclave.jpg",
-    "srilankan-tea-daros-enclave.jpg",
-    "garden-daros-enclave.jpg",
-    "birds-daros-enclave.jpg",
-    "garden-view-daros-enclave.jpg",
+    "room-1-daros-enclave.webp",
+    "room-1-mirror-daros-enclave.webp",
+    "room-2-bed-daros-enclave.webp",
+    "room-2-daros-enclave.webp",
+    "room-2-mirror-daros-enclave.webp",
+    "room-2-mirro-table-daros-enclave.webp",
+    "front-view-daros-enclave.webp",
+    "living-room-daros-enclave.webp",
+    "wall-cupboard-daros-enclave.webp",
+    "antique-furniture-daros-enclave.webp",
+    "sleeping-chart-daros-enclave.webp",
+    "couch-daros-enclave.webp",
+    "dining-room-daros-enclave.webp",
+    "pantry-daros-enclave.webp",
+    "pantry-aminities-daros-enclave.webp",
+    "pantry-equipments-daros-enclave.webp",
+    "glasses-pantry-daros-enclave.webp",
+    "antique-sawing-machine-daros-enclave.webp",
+    "bathroom-mirror-daros-enclave.webp",
+    "bathroom-arrangement-daros-enclave.webp",
+    "bathroom-towels-daros-encalve.webp",
+    "bathroom-shampo-bottles-daros-enclave.webp",
+    "bathroom-daros-enclave.webp",
+    "bathroom-water-closet-daros-enclave.webp",
+    "traditional-kitchen-daros-enclave.webp",
+    "traditional-wood-fire-place-daros-enclave.webp",
+    "srilankan-spices-daros-enclave.webp",
+    "srilankan-style-pots-daros-enclave.webp",
+    "traditional-grinding-stone-daros-enclave.webp",
+    "traditional-coconet-scraper-daros-enclave.webp",
+    "traditional-cooking-daros-enclave.webp",
+    "srilankan-tea-daros-enclave.webp",
+    "garden-daros-enclave.webp",
+    "birds-daros-enclave.webp",
+    "garden-view-daros-enclave.webp",
   ];
   // Remove any intentionally excluded filenames
   const EXCLUDE = new Set([
-    "varenda-daros-enclave.jpg",
-    "birds-daros-enclave.jpg",
-    "garden-daros-enclave.jpg",
-    "garden-view-daros-enclave.jpg",
+    "varenda-daros-enclave.webp",
+    "birds-daros-enclave.webp",
+    "garden-daros-enclave.webp",
+    "garden-view-daros-enclave.webp",
   ]);
   for (let i = masterOrder.length - 1; i >= 0; i--) {
     if (EXCLUDE.has(masterOrder[i])) masterOrder.splice(i, 1);
@@ -110,9 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Ensure these specific images are appended at the end of the load order
   const INCLUDE_AT_END = [
-    "coral in kamburugamuwa beach near daro's enclave.jpg",
-    "kamburugamuwa-beach-daros-enclave.jpg",
-    "sandy-beaches-at-kamburugamuwa-2.jpg",
+    "coral in kamburugamuwa beach near daro's enclave.webp",
+    "kamburugamuwa-beach-daros-enclave.webp",
+    "sandy-beaches-at-kamburugamuwa-2.webp",
   ];
   // Remove if present, then append to end preserving order
   for (const name of INCLUDE_AT_END) {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!homeGallery) return;
     function makeCaption(name) {
       let s = name
-        .replace(/\.jpg$/i, '')
+        .replace(/\.webp$/i, '')
         .replace(/[-_]/g, ' ')
         .replace(/\d+/g, '')
         .replace(/\s+/g, ' ')
