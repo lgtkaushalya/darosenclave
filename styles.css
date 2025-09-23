@@ -188,7 +188,7 @@ p .btn { display: inline-block; margin-left: 8px; }
 
 .contact-info h3,
 .contact-map h3 {
-  color: var(--text-primary);
+  color: var(--text);
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 600;
@@ -206,7 +206,7 @@ p .btn { display: inline-block; margin-left: 8px; }
 }
 
 .contact-icon {
-  color: var(--accent-color);
+  color: var(--accent);
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
@@ -217,19 +217,19 @@ p .btn { display: inline-block; margin-left: 8px; }
 }
 
 .contact-item strong {
-  color: var(--text-primary);
+  color: var(--text);
   display: inline;
   margin-right: 0.5rem;
 }
 
 .contact-item a {
-  color: var(--accent-color);
+  color: var(--brown);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact-item a:hover {
-  color: var(--accent-hover);
+  color: var(--brown);
   text-decoration: underline;
 }
 
@@ -238,7 +238,7 @@ p .btn { display: inline-block; margin-left: 8px; }
 }
 
 .social-links h4 {
-  color: var(--text-primary);
+  color: var(--text);
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 600;
@@ -264,7 +264,7 @@ p .btn { display: inline-block; margin-left: 8px; }
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
-  color: var(--text-primary);
+  color: var(--text);
   text-decoration: none;
   transition: all 0.3s ease;
   width: 100%;
@@ -272,7 +272,7 @@ p .btn { display: inline-block; margin-left: 8px; }
 }
 
 .social-icons a:hover {
-  background: var(--accent-color);
+  background: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -347,16 +347,16 @@ p .btn { display: inline-block; margin-left: 8px; }
 
 .map-overlay .btn {
   background: rgba(255, 255, 255, 0.95);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.1);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .map-overlay .btn:hover {
-  background: var(--accent-color);
+  background: var(--brown);
   color: white;
-  border-color: var(--accent-color);
+  border-color: var(--brown);
 }
 
 .wa-icon { width: 16px; height: 16px; display: inline-block; background: conic-gradient(from 0deg at 50% 50%, #25D366, #25D366); border-radius: 50%; }
