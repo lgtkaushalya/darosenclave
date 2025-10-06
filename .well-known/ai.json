@@ -1,0 +1,23 @@
+{
+  "name": "Daro's Enclave",
+  "description": "A heritage villa between Mirissa and Madiha offering family-friendly stays, ocean access, and authentic Sri Lankan hospitality.",
+  "location": {
+    "city": "Kamburugamuwa",
+    "region": "Southern Province",
+    "country": "Sri Lanka"
+  },
+  "geo": {
+    "latitude": 5.94483253551266,
+    "longitude": 80.49693265660049
+  },
+  "website": "https://www.darosenclave.com",
+  "contact": {
+    "email": "darosenclave@gmail.com",
+    "phone": "+94767488404"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/darosenclave",
+    "instagram": "https://www.instagram.com/daros.enclave",
+    "tiktok": "https://www.tiktok.com/@daros.enclave"
+  }
+}

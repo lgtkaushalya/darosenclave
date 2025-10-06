@@ -1,15 +1,3 @@
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://darosenclave.com/sitemap.xml
-
-# Disallow crawling of assets that don't need indexing
-Disallow: /assets/
-Disallow: /*.css$
-Disallow: /*.js$
-Disallow: /*.json$
-
-# Allow important pages
-Allow: /
-Allow: /activities/
+Sitemap: https://www.darosenclave.com/sitemap.xml
