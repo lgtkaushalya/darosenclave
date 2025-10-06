@@ -1,0 +1,13 @@
+# Allow access to .well-known directory
+<Directory ".well-known">
+    Allow from all
+    Require all granted
+</Directory>
+
+# Set proper MIME type for JSON files
+<Files "*.json">
+    Header set Content-Type "application/json"
+</Files>
+
+# Enable directory browsing for .well-known
+Options +Indexes
