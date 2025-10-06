@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /.well-known/
+Allow: /well-known/
 Sitemap: https://www.darosenclave.com/sitemap.xml

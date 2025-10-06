@@ -1,5 +1,5 @@
-# Allow access to .well-known directory
-<Directory ".well-known">
+# Allow access to well-known directory
+<Directory "well-known">
     Allow from all
     Require all granted
 </Directory>
