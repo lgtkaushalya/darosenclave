@@ -206,7 +206,7 @@ p .btn { display: inline-block; margin-left: 8px; }
 }
 
 .contact-icon {
-  color: var(--accent);
+  color: var(--brown);
   width: 1.5rem;
   height: 1.5rem;
   flex-shrink: 0;
