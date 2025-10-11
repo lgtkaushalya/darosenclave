@@ -1,6 +1,6 @@
 {
   "name": "Daro's Enclave",
-  "description": "A heritage villa between Mirissa and Madiha offering family-friendly stays, ocean access, and authentic Sri Lankan hospitality.",
+  "description": "A rustic Sri Lankan heritage villa between Mirissa and Madiha offering authentic coastal experiences, whale watching, surfing, and traditional activities. Perfect for families seeking genuine southern Sri Lankan hospitality.",
   "location": {
     "city": "Kamburugamuwa",
     "region": "Southern Province",
@@ -19,5 +19,23 @@
     "facebook": "https://www.facebook.com/darosenclave",
     "instagram": "https://www.instagram.com/daros.enclave",
     "tiktok": "https://www.tiktok.com/@daros.enclave"
-  }
+  },
+  "features": [
+    "Whale watching from Mirissa Harbour",
+    "Surfing lessons in Weligama and Madiha",
+    "Traditional Sri Lankan cooking classes",
+    "Lagoon safari at Garanduwa",
+    "Local photo spots and cultural experiences",
+    "Family-friendly beach access",
+    "Authentic heritage villa accommodation"
+  ],
+  "nearby_attractions": [
+    "Mirissa Beach",
+    "Coconut Tree Hill",
+    "Secret Beach",
+    "Parrot Rock",
+    "Weligama Bay",
+    "Madiha Beach",
+    "Garanduwa Lagoon"
+  ]
 }
