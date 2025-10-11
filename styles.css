@@ -429,9 +429,61 @@ p .btn { display: inline-block; margin-left: 8px; }
   /* Theme toggle removed on mobile */
 }
 
+@media (max-width: 768px) {
+  /* Tablet adjustments */
+  .container { padding: 0 20px; }
+  .section { padding: 48px 0; }
+  
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 20px; }
+  
+  .blog-content {
+    padding: 0 10px;
+  }
+  
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 640px) {
-  h1 { font-size: 32px; }
-  h2 { font-size: 26px; }
+  /* Mobile adjustments */
+  .container { padding: 0 16px; }
+  .section { padding: 32px 0; }
+  
+  h1 { font-size: 28px; line-height: 1.2; }
+  h2 { font-size: 24px; line-height: 1.3; }
+  h3 { font-size: 18px; line-height: 1.4; }
+  
+  p { font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+  
+  .blog-content {
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 12px 18px;
+    font-size: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+  
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .amenities-list { grid-template-columns: 1fr; }
   .nav-container { gap: 12px; }
@@ -444,6 +496,223 @@ p .btn { display: inline-block; margin-left: 8px; }
   
   .contact-icon {
     flex-shrink: 0;
+  }
+  
+  /* Mobile typography improvements */
+  ul, ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  /* Mobile spacing adjustments */
+  .section-title {
+    margin-bottom: 20px;
+  }
+  
+  /* Mobile image adjustments */
+  img {
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+  
+  /* Mobile list improvements */
+  .list-inline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .list-inline li {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile adjustments */
+  .container { padding: 0 12px; }
+  .section { padding: 24px 0; }
+  
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 16px; }
+  
+  p { font-size: 14px; }
+  li { font-size: 14px; }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .nav-container {
+    padding: 8px 12px;
+  }
+  
+  .brand-name {
+    font-size: 16px;
+  }
+  
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .menu-icon {
+    width: 18px;
+  }
+  
+  .menu-icon::before { top: -5px; }
+  .menu-icon::after { top: 5px; }
+}
+
+/* Mobile-specific blog content improvements */
+@media (max-width: 640px) {
+  .blog-content h2 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(75, 46, 42, 0.1);
+  }
+  
+  .blog-content h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .blog-content ul,
+  .blog-content ol {
+    margin: 16px 0;
+    padding-left: 18px;
+  }
+  
+  .blog-content li {
+    margin-bottom: 6px;
+  }
+  
+  /* Mobile table improvements if any exist */
+  .blog-content table {
+    font-size: 13px;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .blog-content th,
+  .blog-content td {
+    padding: 8px 6px;
+  }
+  
+  /* Mobile blockquote improvements */
+  .blog-content blockquote {
+    margin: 16px 0;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-left: 3px solid var(--brown);
+  }
+  
+  /* Mobile code improvements */
+  .blog-content code {
+    font-size: 13px;
+    padding: 2px 4px;
+  }
+  
+  .blog-content pre {
+    font-size: 13px;
+    padding: 12px;
+    overflow-x: auto;
+  }
+  
+  /* Mobile text wrapping improvements */
+  .blog-content b {
+    word-break: break-word;
+  }
+  
+  /* Mobile spacing for better readability */
+  .blog-content p + h2,
+  .blog-content ul + h2,
+  .blog-content ol + h2 {
+    margin-top: 40px;
+  }
+  
+  .blog-content p + h3,
+  .blog-content ul + h3,
+  .blog-content ol + h3 {
+    margin-top: 28px;
+  }
+  
+  /* Mobile list spacing improvements */
+  .blog-content ul ul,
+  .blog-content ol ol,
+  .blog-content ul ol,
+  .blog-content ol ul {
+    margin: 8px 0;
+    padding-left: 16px;
+  }
+  
+  /* Mobile emphasis improvements */
+  .blog-content strong,
+  .blog-content b {
+    font-weight: 600;
+  }
+  
+  /* Mobile link improvements */
+  .blog-content a {
+    word-break: break-word;
+    text-decoration: underline;
+    text-decoration-color: var(--brown);
+    text-underline-offset: 2px;
+  }
+  
+  .blog-content a:hover {
+    text-decoration-color: var(--text);
+  }
+}
+
+/* Additional mobile improvements for very small screens */
+@media (max-width: 360px) {
+  .container { padding: 0 8px; }
+  
+  h1 { font-size: 22px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 15px; }
+  
+  p { font-size: 13px; }
+  li { font-size: 13px; }
+  
+  .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  
+  .blog-content {
+    font-size: 13px;
+  }
+  
+  .blog-content h2 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  
+  .blog-content h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-content ul,
+  .blog-content ol {
+    padding-left: 16px;
   }
 }
 
