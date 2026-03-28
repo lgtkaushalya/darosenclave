@@ -113,7 +113,22 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .expand-hint .expand-icon { width: 16px; height: 16px; color: var(--brown); }
 .persona:hover .expand-hint, .activity-card .expand-hint:hover { color: var(--brown); }
 .persona-expanded { margin-top: 12px; }
-.persona-expanded .video-wrap { margin-bottom: 12px; }
+.persona-expanded h4 { font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin: 18px 0 8px; }
+.stay-list { padding-left: 18px; margin: 0 0 12px; }
+.stay-list li { font-size: 15px; line-height: 1.6; color: var(--text); margin-bottom: 4px; }
+.invite-list { list-style: none; padding-left: 0; }
+.invite-list li { font-size: 16px; line-height: 1.7; color: var(--text); margin-bottom: 10px; padding-left: 16px; border-left: 2px solid color-mix(in srgb, var(--brown), transparent 70%); font-style: italic; }
+.muted-note { font-size: 14px; color: var(--muted); font-style: italic; margin: 8px 0 16px; }
+.filter-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 18px 0 20px; }
+.filter-block { border-radius: 10px; padding: 14px 16px; }
+.filter-no { background: rgba(180,60,40,0.06); }
+.filter-yes { background: rgba(60,120,60,0.06); }
+.filter-label { font-size: 13px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin: 0 0 8px; }
+.filter-no .filter-label { color: #8b3a2a; }
+.filter-yes .filter-label { color: #2a6b3a; }
+.filter-block ul { padding-left: 16px; margin: 0; }
+.filter-block ul li { font-size: 14px; line-height: 1.6; color: var(--text); margin-bottom: 4px; }
+.stay-cta { display: inline-flex; margin-top: 4px; text-decoration: none; }
 .persona-host { margin-bottom: 18px; display: none; position: relative; }
 .persona-host.open { display: block; animation: fadeIn .25s ease; }
 .persona[aria-expanded="true"] { box-shadow: 0 0 0 2px color-mix(in srgb, var(--brown), transparent 75%), var(--shadow); }
@@ -493,6 +508,7 @@ p .btn { display: inline-block; margin-left: 8px; }
   
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .amenities-list { grid-template-columns: 1fr; }
+  .filter-cols { grid-template-columns: 1fr; }
   .nav-container { gap: 12px; }
   
   .contact-item {
