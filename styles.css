@@ -154,6 +154,15 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .amenities-list .icon { width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px; color: var(--brown); }
 .amenities-list .icon svg { width: 28px; height: 28px; stroke-width: 2; }
 
+/* Testimonials */
+.testimonials-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 18px; list-style: none; padding: 0; margin: 0; }
+.testimonial-card { display: flex; flex-direction: column; gap: 10px; padding: 20px; background: var(--card); border-radius: 14px; border: 1px solid rgba(0,0,0,0.06); box-shadow: var(--shadow); }
+.testimonial-stars { color: #c8963e; font-size: 18px; letter-spacing: 2px; line-height: 1; }
+.testimonial-text { margin: 0; font-style: italic; color: var(--muted); line-height: 1.65; flex: 1; }
+.testimonial-author { display: flex; flex-direction: column; gap: 2px; margin-top: 4px; border-top: 1px solid rgba(0,0,0,0.07); padding-top: 12px; }
+.testimonial-name { font-weight: 700; color: var(--text); font-size: 15px; }
+.testimonial-origin { font-size: 13px; color: var(--muted); }
+
 /* Activities */
 .activities-grid img { aspect-ratio: 16 / 9; object-fit: cover; }
 .activity-card { transition: transform .18s ease, box-shadow .18s ease; overflow: hidden; padding: 14px; display: flex; }
@@ -425,6 +434,7 @@ p .btn { display: inline-block; margin-left: 8px; }
 @media (max-width: 960px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-list { grid-template-columns: 1fr; }
   .contact-card { grid-template-columns: 1fr; }
   
   .contact-grid {
@@ -508,6 +518,7 @@ p .btn { display: inline-block; margin-left: 8px; }
   
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
   .amenities-list { grid-template-columns: 1fr; }
+  .testimonials-list { grid-template-columns: 1fr; }
   .filter-cols { grid-template-columns: 1fr; }
   .nav-container { gap: 12px; }
   
