@@ -115,7 +115,7 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .filter-block { border-radius: 10px; padding: 14px 16px; }
 .filter-no { background: rgba(180,60,40,0.06); }
 .filter-yes { background: rgba(60,120,60,0.06); }
-.filter-label { font-size: 13px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin: 0 0 8px; }
+.filter-label { font-size: 13px; font-weight: 600; letter-spacing: 0.03em; margin: 0 0 8px; }
 .filter-no .filter-label { color: #8b3a2a; }
 .filter-yes .filter-label { color: #2a6b3a; }
 .filter-block ul { padding-left: 16px; margin: 0; }
@@ -733,6 +733,17 @@ p .btn { display: inline-block; margin-left: 8px; }
   }
 }
 
+.expand-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  vertical-align: middle;
+}
+
+.expand-hint .expand-icon {
+  display: flex;
+  align-items: center;
+}
 
 
 
