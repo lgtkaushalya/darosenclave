@@ -54,6 +54,50 @@
   
   <!-- Activity Pages -->
   <url>
+    <loc>https://www.darosenclave.com/blogs/mirissa-coconut-tree-hill.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.darosenclave.com/blogs/mirissa-parrot-rock.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.darosenclave.com/blogs/mirissa-surfing-weligama-madiha.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.darosenclave.com/blogs/mirissa-snorkeling-turtles.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.darosenclave.com/blogs/mirissa-beach-vibes.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.darosenclave.com/blogs/mirissa-local-culture-traditions.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.darosenclave.com/blogs/mirissa-food-seafood.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Activity Pages -->
+  <url>
     <loc>https://www.darosenclave.com/activities/banana-tree-planting.html</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
