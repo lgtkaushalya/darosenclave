@@ -1,6 +1,6 @@
 {
   "name": "Daro's Enclave",
-  "description": "A rustic Sri Lankan heritage villa between Mirissa and Madiha offering authentic coastal experiences, whale watching, surfing, and traditional activities. Perfect for families seeking genuine southern Sri Lankan hospitality.",
+  "description": "A rustic Sri Lankan heritage villa between Mirissa and Madiha offering authentic coastal experiences, whale watching, surfing, and traditional activities. Also serves as a dedicated research residency for field researchers studying marine biology, conservation, tropical ecology, archaeology, and cultural anthropology in the Indian Ocean region.",
   "location": {
     "city": "Kamburugamuwa",
     "region": "Southern Province",
@@ -27,7 +27,20 @@
     "Lagoon safari at Garanduwa",
     "Local photo spots and cultural experiences",
     "Family-friendly beach access",
-    "Authentic heritage villa accommodation"
+    "Authentic heritage villa accommodation",
+    "Research residency program for marine and conservation biology",
+    "High-speed fiber internet for data analysis and remote collaboration",
+    "Tropical garden workspace for on-site research activities",
+    "Quiet environment for month-long or multi-month field studies"
+  ],
+  "research_opportunities": [
+    "Blue whale research and marine mammal studies",
+    "Saltwater crocodile population surveys and human-wildlife conflict research",
+    "Sea turtle nesting ecology and conservation monitoring",
+    "Mangrove ecosystem restoration and biodiversity research",
+    "Rainforest bird research in Sinharaja UNESCO site",
+    "Maritime heritage and fort archaeology",
+    "Cultural anthropology and ethnographic research"
   ],
   "nearby_attractions": [
     "Mirissa Beach",
@@ -36,6 +49,10 @@
     "Parrot Rock",
     "Weligama Bay",
     "Madiha Beach",
-    "Garanduwa Lagoon"
+    "Garanduwa Lagoon",
+    "Nilwala River estuary",
+    "Rekawa Beach turtle sanctuary",
+    "Sinharaja rainforest",
+    "Galle Fort UNESCO World Heritage site"
   ]
 }
