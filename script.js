@@ -369,3 +369,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// GA4 click events: WhatsApp, email, Airbnb enquiry/booking and phone links
+document.addEventListener('click', (e) => {
+  if (typeof gtag !== 'function') return;
+  const target = e.target instanceof Element ? e.target : e.target && e.target.parentElement;
+  const link = target ? target.closest('a') : null;
+  if (!link) return;
+  const href = link.href || link.getAttribute('href') || '';
+  let eventName = null;
+  if (/wa\.me|api\.whatsapp/i.test(href)) eventName = 'whatsapp_click';
+  else if (/^mailto:/i.test(href)) eventName = 'email_click';
+  else if (/airbnb\.com\/h\/darosenclave/i.test(href)) eventName = 'enquiry_click';
+  else if (/^tel:/i.test(href)) eventName = 'phone_click';
+  if (!eventName) return;
+  gtag('event', eventName, {
+    page_location: window.location.href,
+    link_url: href
+  });
+});
